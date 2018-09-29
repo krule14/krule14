@@ -1,1 +1,38 @@
-/*Testing testing 123*/
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #181516;
+}
+
+li b{
+    float: right;
+}
+
+li a {
+    display: inline-block;
+    color: #EFDCBC;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #636361;
+}
+
+.active {
+    background-color: #6B1F15;
+}
+body {
+	background-color:#D4CFCD;
+}
+title{
+
+    display: inline-block;
+    color: #181516;
+    padding: 14px 200px;
+    font-size: 7;
+ }
+    
