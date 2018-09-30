@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Homework 1</b></h1>
+  <p>Make a webpage. Use git, bootstrap, and use your own CSS file.</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+    
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Question 1-Setup Git<b></h3>
+      <h5><span class="w3-opacity">"Download and install the command line version of the Git version control system if you don't already have it. All code you write from now on (for the entire year!) must be added and committed to a Git repository that you create and manage. For this term I recommend that you make one repository for all your work. Inside this repo/folder each assignment is its own folder. So you'll have one repo and within it folders for HW1, HW2, etc."</span> </h5>
+        
+    </div>
+
+    <div class="w3-container">
+        <p> Note that this is out of order with how I stumbled around with this. I had only a couple hours of experience with HTML, and some experience with SourceTree, but none with git command line or CSS. This was mostly new to me, much to my chagrin. The blog has an order that makes sense, my attempts to do things did not. 
+            First I downloaded git from <a href="https://git-scm.com/downloads" class="homeworks">here</a>. Then I set up git as it prompted me to. It put an icon on my desktop which I now use to get to the command line version of git.  
+        </p>
+        <p>
+                Woo hoo! We have Git! Now, first things first, configure git and add your username and email. I think that this is in order to get the sign in information to line up with the account you made on GitHub so it can sync the information on the local machine to the server.
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule1
+                $ git config --global user.email "thisIsFakeEmail@mail.wou.edu
+
+                katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule1
+                $ git config --global user.name "krule14"
+
+                </code></pre></div>
+            </div>
+        
+        <p>
+                Created a repository named Senior_Sequence because I was confused. I created Senior_Sequence repository on the website and then cloned onto my machine using:
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                katie@DESKTOP-H160M3S MINGW64 ~
+                $ git clone https://github.com/krule14/Senior_Sequence
+
+                </code></pre></div>
+        </div>
+        <p>
+             Then Created a Repository called Krule14 (which is my Username). I overheard the class talking about needing a repository that was titled with our usernames. So that’s what I did. I made a mistake that I couldn’t fix, more about this later.     
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+            katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence (master)
+            $ git clone https://github.com/krule14/krule14.git
+            </code></pre></div>
+        </div>
+        <p>
+            Then Created a Repository called Krule14 (which is my Username). I overheard the class talking about needing a repository that was titled with our usernames. So that’s what I did. I made a mistake that I couldn’t fix, more about this later.     
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+            katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence (master)
+             $ git clone https://github.com/krule14/krule14.git
+            </code></pre></div>
+        </div>
+
+        <p>
+                Then I demonstrated to myself that I could add and commit from the command line:
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule14 (master)
+                $ git commit -m "This is my first commit in command line. Hi world"
+                
+            </code></pre></div>
+        </div>
+        <p>
+                Which gave me:
+        </p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                [master 400d1d1] This is my first commit in command line. Hi world
+                1 file changed, 22 insertions(+)
+                create mode 100644 index.html
+               
+            </code></pre></div>
+        </div>
+        <p>
+                Which I of course verified on the github webpage. It was there after a refresh. 
+        </p>
+         <p>
+                After that, I made the “HW1” file and pushed it to the repository and made sure it was there just like with krule14.  Task 1 done! WOOT!
+        </p>
+    
+    </div>
+
+    </div>
+  </div>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Homework 1<b></h3>
+          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+                <form action="HW1/index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Homework 1<b></h3>
+          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+                <form action="HW1/index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Homework 1<b></h3>
+          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
+        </div>
+    
+        <div class="w3-container">
+          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
+          <div class="w3-row">
+            <div class="w3-col m8 s12">
+                <form action="HW1/index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+  <hr>
+</body>
+</html>
