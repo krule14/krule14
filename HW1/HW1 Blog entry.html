@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<style type="text/css">.tab { margin-left: 40px; }    </style>
+<style type="text/css">.tab { margin-left: 40px; } </style>
+<style type="text/css">.doubletab { margin-left: 80px; } </style>
+<style type="text/css">.tripletab { margin-left: 120px; } </style>
+<style type="text/css">.quadtab { margin-left: 160px; } </style>
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -127,19 +130,61 @@ and is wrapped around the whole page content, except for the footer in this exam
                         You must use Bootstrap (v4) for the layout of all pages and must demonstrate both single column layout and two or more column formatting
                         I will be using examples from my index.html for simplicity’s sake.
                         So we have in the header:
-                        ```markdown
 
-                        ```
-                        ```markdown
-                         <!-- Bootstrap CSS -->
-                        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-                        ```
-                        <img src="Bootstrap header.jpg" alt="Nature" style="width:100%">
-                        Which I’m pretty sure I found at the bootstrap website. https://getbootstrap.com/docs/4.1/getting-started/introduction/
+                        <code class="prettyprint">
+                                <p>
+                                        &lt;!-- Bootstrap CSS --&gt;
+                                 </p>
+                                <p>
+                                        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"&gt;     
+                                    </p>
+                             </code>
+                        Which I’m pretty sure I found at the <a href="HW1/index.html" class="website"> bootstrap website</a>. 
                 </p>
                 <p>
                         Then, around my text and other stuff is a container (bootstrap), with rows and columns:
-                        <img src="Bootstrap header.jpg" alt="Nature" style="width:100%">
+                 </p>
+                    <code class="prettyprint">
+                        <p>
+                            &lt; div class="container">
+                         </p>
+                        <p class="tab">
+                                &lt;div class="row">
+                         </p>
+                        <p class="doubletab">
+                                &lt;div class="col-md-6">
+                         </p>
+                        <p class="tripletab">
+                                &lt;img src="Katsuki_Bakugo_School_Uniform_Full_Body.png" alt="SchoolBakugou" width="333" height="700">
+                         </p>  
+                         <p class="doubletab">
+                                &lt;/div>
+                         </p> 
+                        <p class="doubletab">
+                                &lt;div class="col-md-6">
+                         </p>  
+                         <p class="tripletab">
+                                &lt;font size="5">&lt;title>  Background Information&lt;/title>&lt;/font>
+                         </p> 
+                        <p class="doubletab">
+                                &lt;p> Bakugou is an angri boi in the anime Boku no Hero Academia. He likes to threaten to murder things for some reason.
+                                &lt;/p>
+                         </p> 
+                         <p class="doubletab">
+                                &lt;p>
+                                Morbi eget mattis lacus. Aliquam suscipit dui eu urna posuere, non porta quam fermentum. Integer eleifend rhoncus metus ut fermentum. In hac habitasse platea dictumst. Nunc in lobortis diam, eu congue neque. Ut commodo magna sollicitudin nunc vestibulum faucibus. Nunc cursus velit ex. Aliquam erat volutpat. Nulla elit turpis, pharetra nec sodales eu, lacinia et massa. Etiam egestas faucibus turpis, eu posuere augue condimentum a. Morbi vehicula auctor tempor. 
+                            &lt;/p> 
+                         <p class="doubletab">
+                                &lt;/div>
+                         </p> 
+                         <p class="tab">
+                                &lt;/div>
+                         </p> 
+                         <p>
+                                &lt;/div>
+                         </p> 
+                         </code>
+                 <p>
                         And I am pretty sure that this satisfies the requirement for bootstrap. 
                     </p>
                     
@@ -149,7 +194,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                 </span></h5>
 
                 <p>
-                        If you look at my website, it looks awful. This is because almost all of he styling used is from my own CSS file, although I did take the code for the menu bar from here(link: https://www.w3schools.com/css/tryit.asp?filename=trycss_float5)  and modified it to my liking.
+                        If you look at my website, it looks awful. This is because almost all of he styling used is from my own CSS file, although I did take the code for the menu bar from <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_float5" class="website"> here</a>.
                 </p>
                 <p>
                         This is in the html files which allow me to use CSS:
@@ -284,7 +329,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                     You'll need a navigation bar or menu that contains links to all your pages
                 </span></h5>
                 <p>
-                        I took the code for the menu bar from here(link: https://www.w3schools.com/css/tryit.asp?filename=trycss_float5)  and modified it to my liking.
+                        I took the code for the menu bar from <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_float5" class="website"> here</a>.
                 </p>
                 <p>
                         Here is the code in index.html:
@@ -312,6 +357,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         </div>
       </div>
+      
       <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
         
