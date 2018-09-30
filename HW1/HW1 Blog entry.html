@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
@@ -29,11 +30,20 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-col l8 s12">
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-    <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
     <div class="w3-container">
-      <h3><b>Question 1-Setup Git<b></h3>
-      <h5><span class="w3-opacity">"Download and install the command line version of the Git version control system if you don't already have it. All code you write from now on (for the entire year!) must be added and committed to a Git repository that you create and manage. For this term I recommend that you make one repository for all your work. Inside this repo/folder each assignment is its own folder. So you'll have one repo and within it folders for HW1, HW2, etc."</span> </h5>
-        
+      <h3><b>Question 1 & 2-Setup Git<b></h3>
+      <h5><span class="w3-opacity">
+          "Download and install the command line version of the Git version control system if you don't already have it. All code you write from now on (for the entire year!) must be added and committed to a Git repository that you create and manage. For this term I recommend that you make one repository for all your work. Inside this repo/folder each assignment is its own folder. So you'll have one repo and within it folders for HW1, HW2, etc."
+      </span> </h5>
+      <h5><span class="w3-opacity">
+            Create an account on GitHub or Bitbucket. (We'll probably use Bitbucket exclusively Winter and Spring for our group projects, but we'll use GitHub for part of our work this term -- so you'll end up needing both.) Get yourself set up and synchronize your local repository so you're ready to develop. Once set up your workflow will be: 
+            on your development machine, create and edit source code files
+            add them
+            when ready, commit, then 
+            when you are ready to save or share your code, push to your remote repository
+            You're the only developer so you don't have to worry about anyone else modifying your repository. Or do you? If you work on two machines (a laptop and a desktop) then you are effectively two developers working on the same code. This is what Git excels at (distributed development) but you'll learn that as we go along. For now, don't ever edit the files on different machines without first pulling changes and only then add/commit/push.""
+        </span> </h5>
+       
     </div>
 
     <div class="w3-container">
@@ -43,61 +53,53 @@ and is wrapped around the whole page content, except for the footer in this exam
         <p>
                 Woo hoo! We have Git! Now, first things first, configure git and add your username and email. I think that this is in order to get the sign in information to line up with the account you made on GitHub so it can sync the information on the local machine to the server.
         </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+        <code class="prettyprint">
                 katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule1
                 $ git config --global user.email "thisIsFakeEmail@mail.wou.edu
 
                 katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule1
                 $ git config --global user.name "krule14"
 
-                </code></pre></div>
-            </div>
+                </code>
+            
         
         <p>
                 Created a repository named Senior_Sequence because I was confused. I created Senior_Sequence repository on the website and then cloned onto my machine using:
         </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+        <code class="prettyprint">
                 katie@DESKTOP-H160M3S MINGW64 ~
                 $ git clone https://github.com/krule14/Senior_Sequence
 
-                </code></pre></div>
-        </div>
+                </code>
+        
         <p>
              Then Created a Repository called Krule14 (which is my Username). I overheard the class talking about needing a repository that was titled with our usernames. So that’s what I did. I made a mistake that I couldn’t fix, more about this later.     
         </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+        <code class="prettyprint">
             katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence (master)
             $ git clone https://github.com/krule14/krule14.git
-            </code></pre></div>
-        </div>
-        <p>
-            Then Created a Repository called Krule14 (which is my Username). I overheard the class talking about needing a repository that was titled with our usernames. So that’s what I did. I made a mistake that I couldn’t fix, more about this later.     
-        </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-            katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence (master)
-             $ git clone https://github.com/krule14/krule14.git
-            </code></pre></div>
-        </div>
-
+            </code>
+        
+       
         <p>
                 Then I demonstrated to myself that I could add and commit from the command line:
         </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+        <code class="prettyprint">
                 katie@DESKTOP-H160M3S MINGW64 ~/Senior_Sequence/krule14 (master)
                 $ git commit -m "This is my first commit in command line. Hi world"
                 
-            </code></pre></div>
-        </div>
+            </code>
+        
         <p>
                 Which gave me:
         </p>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+        <code class="prettyprint">
                 [master 400d1d1] This is my first commit in command line. Hi world
                 1 file changed, 22 insertions(+)
                 create mode 100644 index.html
                
-            </code></pre></div>
-        </div>
+            </code>
+        
         <p>
                 Which I of course verified on the github webpage. It was there after a refresh. 
         </p>
@@ -108,65 +110,169 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     </div>
-  </div>
+  
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
         <div class="w3-container">
-          <h3><b>Homework 1<b></h3>
-          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
+          <h3><b>Question 3<b></h3>
         </div>
     
         <div class="w3-container">
-          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
-          <div class="w3-row">
-            <div class="w3-col m8 s12">
-                <form action="HW1/index.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
-                </form>
-              </div>
-          </div>
+                <h5> <span class="w3-opacity">
+                        You must use Bootstrap (v4) for the layout of all pages and must demonstrate both single column layout and two or more column formatting
+                </span></h5>
+                <p>
+                        You must use Bootstrap (v4) for the layout of all pages and must demonstrate both single column layout and two or more column formatting
+                        I will be using examples from my index.html for simplicity’s sake.
+                        So we have in the header:
+                        <img src="Bootstrap header.jpg" alt="Nature" style="width:100%">
+                        Which I’m pretty sure I found at the bootstrap website. https://getbootstrap.com/docs/4.1/getting-started/introduction/
+                </p>
+                <p>
+                        Then, around my text and other stuff is a container (bootstrap), with rows and columns:
+                        <img src="Bootstrap header.jpg" alt="Nature" style="width:100%">
+                        And I am pretty sure that this satisfies the requirement for bootstrap. 
+                    </p>
+                    
+                
+          <h5> <span class="w3-opacity">
+                You must have a separate CSS file (e.g. styles.css) in which you write some of your own classes and that you use somewhere
+                </span></h5>
+                <p>
+                        If you look at my website, it looks awful. This is because almost all of he styling used is from my own CSS file, although I did take the code for the menu bar from here(link: https://www.w3schools.com/css/tryit.asp?filename=trycss_float5)  and modified it to my liking.
+                </p>
+                <p>
+                        This is in the html files which allow me to use CSS:
+                </p>
+                <code class="prettyprint">
+                        <!-- Katie CSS -->
+                        <link rel="stylesheet" type="text/css" href="css/katies_styles.css">
+
+                        </code>
+                <p>
+                        And this is my CSS page:   
+                </p>
+                <code class="prettyprint">
+                        .menu{
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            overflow: hidden;
+                            background-color: #181516;
+                        }
+                        
+                        li b{
+                            float: right;
+                        }
+                        
+                        li a {
+                            display: inline-block;
+                            color: #EFDCBC;
+                            text-align: center;
+                            padding: 14px 16px;
+                            text-decoration: none;
+                        }
+                        
+                        li a:hover {
+                            background-color: #636361;
+                        }
+                        
+                        .active {
+                            background-color: #6B1F15;
+                        }
+                        body {
+                            background-color:#D4CFCD;
+                        }
+                        title{
+                        
+                            display: inline-block;
+                            color: #181516;
+                            padding: 14px 200px;
+                            font-size: 7;
+                         }
+                        
+                        </code>
+                        
+            <h5> <span class="w3-opacity">
+                    You'll need a navigation bar or menu that contains links to all your pages
+                </span></h5>
+                <p>
+                        I took the code for the menu bar from here(link: https://www.w3schools.com/css/tryit.asp?filename=trycss_float5)  and modified it to my liking.
+                </p>
+                <p>
+                        Here is the code in index.html:
+                        <img src="Bootstrap header.jpg" alt="Nature" style="width:100%">
+                        It highlights when you hover over one of the options. It also highlights the page you are on. Let’s say you decide to click on the “Ships” page. The code for the active class is removed from Home and moved to ships.
+                </p>
+                
+            <h5> <span class="w3-opacity">
+                    You need to have at least one table. and at least two kinds of lists: ol, ul and dl
+                </span></h5>
+                <p>
+                        Code for the table found on d_CharDev.html:
+                        <img src="Table.jpg" alt="Nature" style="width:100%">
+                </p>
+                <h5> <span class="w3-opacity">
+                        All main elements need to be styled consistently: use those defined by Bootstrap or use your own. But please, no obnoxious colors or backgrounds. You should attempt to make a professional and modern looking web page. (NO templates or theme packs! You've got to do this yourself!)
+                        You must write all code yourself and may not use a WYSIWYG designer such as Dreamweaver. Good (free) HTML and CSS aware editors include Atom, Brackets, Visual Studio Code. When writing HTML and CSS you're doing yourself a disservice if you're not using the Emmet plug-in!
+
+                </span></h5>
+                <p>
+                        I can’t speak to aesthetics, I am no designer, but I tried to do consistency across the demo site, and I made it as professional as I could without using gobs of copy/pasted code that I don’t understand. I will say, that it is… ahem… unique enough that no one else would want to make this site, and it is very clear that I had no outside help.  
+                </p>
+
+          
+
         </div>
       </div>
       <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
+        
         <div class="w3-container">
-          <h3><b>Homework 1<b></h3>
-          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
-        </div>
+          <h3><b>Question 4-7<b></h3>
+          <h5> <span class="w3-opacity">
+              When finished to your liking, make sure all changes are committed and pushed to your remote repository. Make a note of the "clone" URL of your remote repo. You should be able to clone your repo to anywhere and then open the main .html file (i.e. index.html) and view your pages correctly.
+            </span></h5>
+       
+          <h5> <span class="w3-opacity">W\
+             Create a repository on GitHub and enable the GitHub Pages feature. This gives you a normal Git repository AND a hosted web server automatically serving pages from your repo. You can then use this web server to view your homework's html pages on the web. More importantly, it will also serve as your Portfolio this term. It will showcase all your work. You'll want it to look very nice, as it is public and it has your name on it. Future employers may see it! Make a nice landing page that has your name and then a link to a CS 460 landing page. This CS 460 page should have links to separate pages for each homework. For each homework you'll have one or more pages that showcase your work, and include all your code. They should be written in a Blog post kind of way. Include written explanations of what you're trying to accomplish and then include both your code and links to the working pages. 
+          </span></h5>
+       
+          <h5> <span class="w3-opacity">
+                Create a Blog, Post or Journal entry type page within your Pages repository where you show off your work for this homework. Here is my super simple example: morses.github.io (see Homework 1). Of course, take a look at the samples from last year also. You should describe the assignment and then dive into your solution. You must show all important code, or example code that shows you are meeting the requirements, in your post and it should use syntax highlighting. Make sure you have included a link to your actual repo and that it is publicly available. Include a link to your demo page (the HTML and CSS you wrote for #3 above) page somewhere obvious.  
+            
+            </span></h5>
+            <h5> <span class="w3-opacity">
+                    Visit the class Moodle page and the HW1 link. Review the grading rubric to make sure you'll get full points. Turn in the URL for your Portfolio. I will grade it on the web at some point after the due date and will use the rubric to score it. 
+                </span></h5>
+      
+            </div>
     
         <div class="w3-container">
-          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
-          <div class="w3-row">
-            <div class="w3-col m8 s12">
-                <form action="HW1/index.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
-                </form>
-              </div>
-          </div>
-        </div>
+          <p> 
+                 
+                Clearly I completed this part, or you wouldn’t be seeing this. Yes, I have been pushing periodically. I took the URL and replicated  the repo around 5 times on my computer and it works fine. I think I lost one or two copies on my computer which is a little embarrassing.
+            </p>
+           <p> 
+                Well, remember the mistake I told you about in question 1? The repository name is  Krule14 (which is my Username this was in order to make git pages work. Unfortunately I did not catch that it needed to have the suffix .github.io in order to make it work. I didn’t figure this out until after I had given up and made a website of my own and uploaded the URL for turn in. Ah well, live and learn. 
+                
+            </p>
+           <p> 
+                But you’re reading this blog. I mean, I’m not done writing it while I’m writing this sentence but… It will be done when you are reading it. Probably. This part will be done. This part right here. That you are reading. Right now.
+               
+            </p>
+           <p> 
+                Enough meta stuff. I made this website you see right now by basically copying most of the code from here: https://www.w3schools.com/w3css/tryw3css_templates_blog.htm. I felt comfortable doing that because there wasn’t any explicit prohibition on getting things to help me (like with the demo). To be fair though, I did not use any actual nice tools for this. It was all done with virtual studio code and a whole lot of tears. 
+                
+
+            </p>
+            <p> 
+                    Additionally, as of my writing this, I was trying to use prettyprint for most of my code syntax. It said it was supposed to do html and css, but it is clearly not doing it well. It wreaked all manner of havoc on this site that you’re reading. I hope that I fix this by the time you read it, but if not, its kinda 1 am and I have been working on this project for over 20 hours by my reckoning. So forgive me some bugs. 
+                </p>
+          
       </div>
-    <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-        <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
-        <div class="w3-container">
-          <h3><b>Homework 1<b></h3>
-          <h5> Due <span class="w3-opacity">September 28th, 2018</span></h5>
-        </div>
-    
-        <div class="w3-container">
-          <p> Make a webpage. Use git, bootstrap, and use your own CSS file. See my <a href="HW1/index.html" class="homeworks"> demo page here</a>.</p>
-          <div class="w3-row">
-            <div class="w3-col m8 s12">
-                <form action="HW1/index.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ BLOG ENTRY &raquo;</b></button></p>
-                </form>
-              </div>
-          </div>
-        </div>
-      </div>
+
   <hr>
 </body>
 </html>
