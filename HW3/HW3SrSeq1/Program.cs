@@ -22,7 +22,7 @@ namespace HW3SrSeq1
         {
 
         }
-        public QueueUnderflowException(String message) : base(message)
+        public QueueUnderflowException(string message) : base(message)
         {
 
         }
@@ -38,21 +38,52 @@ namespace HW3SrSeq1
             front = null;
             rear = null;
         }
-        public T push(T element)
+        public T Push(T element)
         {
             if(element == null)
             {
-                throw new NullPointerException();
+                throw new NullReferenceException();
             }
+            if(IsEmpty())
+            {
+                Node<T> tmp = new Node<T>(element, next: null);
+                rear = front = tmp;
+            }
+            else
+            {
+                //general case
+                Node<T> tmp = new Node<T>(element, next: null);
+                rear.next = tmp;
+                rear = tmp;
+            }
+            return element;
+
         }
-        public T pop()
+        public T Pop()
         {
-            T hello;
-            return hello;
+            T tmp;
+            if (IsEmpty())
+            {
+                throw new QueueUnderflowException("The queue was empty when pop was invoked.");
+            }
+            else if (front == rear)
+            {
+                //one item in queue
+                tmp = front.data;
+                front = null;
+                rear = null;
+            }
+            else
+            {
+                //general case
+                tmp = front.data;
+                front = front.next;
+            }
+            return tmp;
         }
         public Boolean IsEmpty()
         {
-            return true;
+            return (front == null && rear == null); 
         }
 
     }
@@ -109,13 +140,13 @@ namespace HW3SrSeq1
             }
 
             //enqueue the first binary number. Use dynamic string to avoid string concat
-            q.push(new StringBuilder("1"));
+            q.Push(new StringBuilder("1"));
 
             //BFS
             while (n-- > 0)
             {
                 //print the front of queue
-                StringBuilder sb = q.pop();
+                StringBuilder sb = q.Pop();
                 output.AddLast(sb.ToString());
 
                 //Make a copy
@@ -123,11 +154,11 @@ namespace HW3SrSeq1
 
                 //Left child
                 sb.Append('0');
-                q.push(sb);
+                q.Push(sb);
 
                 //Right child
                 sb.Append('1');
-                q.push(sb);
+                q.Push(sb);
             }
             return output;
         }
@@ -154,7 +185,7 @@ namespace HW3SrSeq1
             // Print it right justified.  Longest string is the last one.
             // Print enough spaces to move it over the correct distance
 
-            int maxLength = output.Last.Length;
+            int maxLength = output.Count - 1;
             // this freaking line is a butt- try to fix
             foreach (string s in output)
             {
