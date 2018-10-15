@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<title>HW3 Blog Entry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<style type="text/css">.tab { margin-left: 40px; } </style>
+<style type="text/css">.doubletab { margin-left: 80px; } </style>
+<style type="text/css">.tripletab { margin-left: 120px; } </style>
+<style type="text/css">.quadtab { margin-left: 160px; } </style>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Homework 3</b></h1>
+  <p>Translate a java app into C#</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+    
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Question 1 & 2-Setup<b></h3>
+      <h5><span class="w3-opacity">
+          "Get your development environment set-up: download and install Visual Studio IDE. (Community 2017 free version is fine); DO NOT USE THE MAC VERSION. It is not the same product and will not do what we need this year."
+      </span> </h5>
+      <h5><span class="w3-opacity">
+          "Download the Java application provided. Review the code; and compile and run to learn what it does. This version is different from last year."
+        </span> </h5>
+       
+    </div>
+
+    <div class="w3-container">
+        <p> 
+               I downloaded Visual Studio Community 2017. That took way longer than expected. Then I downloaded java application which I opened in inteliJ.
+        </p>
+    </div>
+
+    </div>
+  
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        <div class="w3-container">
+          <h3><b>Question 3<b></h3>
+        </div>
+    
+        <div class="w3-container">
+                <h5> <span class="w3-opacity">
+                 Your job is to replicate (i.e. translate) this Java program but in C#. You should write a C# console application from scratch that does exactly what the Java version does. Do not copy and paste the code. Type it in and translate as you go. Let me repeat. DO NOT COPY, PASTE and then TRY TO FIX THE ERRORS!       
+                </span></h5>
+                <p>
+                       I did this part twice because I was dumb and tried to do it in Visual Studio code which doesn't do diddly squat. Then I typed it up in Visual Studio Community 2017. It basically yelled at me every so often to go look something up.          
+                </p>
+                
+                <p>
+                    In typing these things up in Visual Studio Community, it opened with a boilerplate namespace. Thus I fundementally misunderstood what a namespace is, and thought that I was supposed to put all of the classes into that namespace on that one file. Needless to say, that didn't go over well. Additonally, I had some major problems with brainfarting and naming a class "Main" which the code did not like at all.
+                </p>
+
+        </div>
+      </div>
+      
+      <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        
+        <div class="w3-container">
+          <h3><b>Question 4<b></h3>
+          <h5> <span class="w3-opacity">
+            Start a new C# console application whose code is inside a HW3 folder in your Git repository. Add and commit your project files and code just like normal, but do use Visual Studio's .gitignore file so that the multitude of unnecessary files are not shouting to be added to Git. As with the last homework, all work for this homework should be done in a new feature branch with multiple commits over time. </span></h5>
+    
+        <div class="w3-container">
+          <p> 
+             I committed once on the main branch while thinking I was committing to the feature branch, but I eventually got onto the feature branch. As of my writing this, I have not committed to the main branch while the feature branch had commits, but I intend to put this blog post onto the main branch while the feature branch is unmerges and has some pushes on it. 
+          </p>
+          <p> 
+            I added a gititnore file from the 
+            <a href="https://github.com/github/gitignore/blob/master/VisualStudio.gitignore" class="homeworks"> github gitignore repository </a>
+            . I was messing with making the folders look pretty, and I accidentally deleted the gitignore file for a push. Whoops! I fixed it though.
+          </p>
+                    
+          
+      </div>
+</div>
+</div>
+
+      <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-container">
+                  <h3><b>Question 5 & 6<b></h3>
+                  <h5><span class="w3-opacity">
+                         Translate your code, don't do your own thing. Type it out by hand. Keep to conventions. Don't use String, use string.       
+                  </span> </h5>
+                   
+                </div>
+            
+                <div class="w3-container">
+                    <p> 
+                          Yes, I hand typed everything. Unfortunately I didn't impliment things in the recommended order, but since I had a fundemental misunderstanding of what namespaces were for, I didn't make seperate file for each class while typing it up. 
+                    </p>
+
+            
+                </div>
+            
+                </div>  
+
+   <!-- Blog entry -->
+   <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Question 7<b></h3>
+      <h5><span class="w3-opacity">
+        Test your code from the command line. Make sure it generates output identical to the java code.
+      </span> </h5>
+       
+    </div>
+
+    <div class="w3-container">
+        <p> 
+            I'm fairly sure the code works like it's supposed to. From what I gathered, the code in java takes an argument and counts up to that number in binary. The C# code does the same thing: 
+        </p>
+         <img src="img/CommandPrompt.png" alt="CommandPrompt.png" style="width:100%">
+         <p> 
+          
+        </p>
+
+    </div>
+
+    </div>  
+
+  <hr>
+</body>
+</html>
