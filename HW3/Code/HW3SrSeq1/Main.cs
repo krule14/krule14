@@ -1,115 +1,10 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HW3SrSeq1
 {
-    public class Node<T>
-    {
-        public T data;
-        public Node<T> next;
-
-        public Node(T data, Node<T> next)
-        {
-            this.data = data;
-            this.next = next;
-        }
-    }
-
-    public class QueueUnderflowException : SystemException
-    {
-        public QueueUnderflowException() : base()
-        {
-
-        }
-        public QueueUnderflowException(string message) : base(message)
-        {
-
-        }
-    }
-
-    public class LinkedQueue<T> : IQueueInterface<T>
-    {
-        private Node<T> front;
-        private Node<T> rear;
-
-        public LinkedQueue()
-        {
-            front = null;
-            rear = null;
-        }
-        public T Push(T element)
-        {
-            if(element == null)
-            {
-                throw new NullReferenceException();
-            }
-            if(IsEmpty())
-            {
-                Node<T> tmp = new Node<T>(element, next: null);
-                rear = front = tmp;
-            }
-            else
-            {
-                //general case
-                Node<T> tmp = new Node<T>(element, next: null);
-                rear.next = tmp;
-                rear = tmp;
-            }
-            return element;
-
-        }
-        public T Pop()
-        {
-            T tmp;
-            if (IsEmpty())
-            {
-                throw new QueueUnderflowException("The queue was empty when pop was invoked.");
-            }
-            else if (front == rear)
-            {
-                //one item in queue
-                tmp = front.data;
-                front = null;
-                rear = null;
-            }
-            else
-            {
-                //general case
-                tmp = front.data;
-                front = front.next;
-            }
-            return tmp;
-        }
-        public Boolean IsEmpty()
-        {
-            return (front == null && rear == null); 
-        }
-
-    }
-
-    public interface IQueueInterface<T>
-    {
-        /**
-         * Add an element to the rear of the queue
-         * 
-         * @return the element that was enqueued
-         */
-        T Push(T element);
-        /**
-        * Remove and return the front element.
-        * 
-        * @throws Thrown if the queue is empty
-        */
-        T Pop(); // throws QueueUnderflowException;
-        /**
-        * Test if the queue is empty
-        * 
-        * @return true if the queue is empty; otherwise false
-        */
-        Boolean IsEmpty();
-    }
-
     public class Main
     {
         /**
@@ -164,7 +59,7 @@ namespace HW3SrSeq1
         }
 
         //Driver program to test above function
-        public static void main(string[] args)
+         static void Main(string[] args)
         {
             int n = 10;
             if (args.Length < 1)
@@ -176,7 +71,8 @@ namespace HW3SrSeq1
             try
             {
                 n = int.Parse(args[0]);
-            } catch (FormatException e)
+            }
+            catch (FormatException e)
             {
                 Console.WriteLine("I'm sorry, I can't understand the number: " + args[0]);
                 return;
@@ -187,6 +83,7 @@ namespace HW3SrSeq1
 
             int maxLength = output.Count - 1;
             // this freaking line is a butt- try to fix
+
             foreach (string s in output)
             {
                 for (int i = 0; i < maxLength - s.Length; ++i)
@@ -197,10 +94,5 @@ namespace HW3SrSeq1
             }
 
         }
-
-
     }
-
-
-    
 }

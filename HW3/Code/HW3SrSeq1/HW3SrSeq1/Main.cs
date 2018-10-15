@@ -52,8 +52,8 @@ namespace HW3SrSeq1
                 q.Push(sb);
 
                 //Right child
-                sb.Append('1');
-                q.Push(sb);
+                sbc.Append('1');
+                q.Push(sbc);
             }
             return output;
         }

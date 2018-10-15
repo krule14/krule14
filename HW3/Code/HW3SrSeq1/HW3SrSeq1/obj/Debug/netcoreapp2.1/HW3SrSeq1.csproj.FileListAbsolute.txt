@@ -1,0 +1,10 @@
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\obj\Debug\netcoreapp2.1\HW3SrSeq1.csproj.CoreCompileInputs.cache
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\obj\Debug\netcoreapp2.1\HW3SrSeq1.AssemblyInfoInputs.cache
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\obj\Debug\netcoreapp2.1\HW3SrSeq1.AssemblyInfo.cs
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\bin\Debug\netcoreapp2.1\HW3SrSeq1.deps.json
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\bin\Debug\netcoreapp2.1\HW3SrSeq1.runtimeconfig.json
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\bin\Debug\netcoreapp2.1\HW3SrSeq1.runtimeconfig.dev.json
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\bin\Debug\netcoreapp2.1\HW3SrSeq1.dll
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\bin\Debug\netcoreapp2.1\HW3SrSeq1.pdb
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\obj\Debug\netcoreapp2.1\HW3SrSeq1.dll
+C:\Users\katie\source\repos\HW3SrSeq1\HW3SrSeq1\obj\Debug\netcoreapp2.1\HW3SrSeq1.pdb
