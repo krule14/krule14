@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Mile Converter";
+}
+<h2>@ViewBag.Title</h2>
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="get">
+            <p><label for="Something">Miles</label></p>
+            <input id="Something" name="miles" type="number" />
+    </div>
+
+
+    <div class="col-md-6">
+        <h2>Select a unit</h2>
+        <div class="w3-container">
+            <ul style="list-style-type:none">
+                <li><input type='radio' id='millimeters' name='type' value='mil' onclick="adder(0)" />Millimeters</li>
+                <li><input type='radio' id='centimeters' name='type' value='cent' onclick="adder(1)" />Centimeters</li>
+                <li><input type='radio' id='meters' name='type' value='met' onclick="adder(2)" />Meters </li>
+                <li><input type='radio' id='kilometers' name='type' value='kilo' onclick="adder(3)" />Kilometers</li>
+            </ul>
+        </div>
+        <p><a class="btn btn-primary" href="/Home/ColorMixer?Length=4">Submit</a></p>
+
+    </div>
+    
+    </form>
+</div>

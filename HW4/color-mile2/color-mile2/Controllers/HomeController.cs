@@ -13,16 +13,16 @@ namespace color_mile2.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult MileConverter()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "AHAHAHA!! I FOUND IT!!";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult ColorMixer()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "PHHHHTTTT! I FOUND THE THINGY!!!";
 
             return View();
         }
