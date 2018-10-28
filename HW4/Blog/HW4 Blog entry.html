@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<title>HW4 Blog Entry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<style type="text/css">.tab { margin-left: 40px; } </style>
+<style type="text/css">.doubletab { margin-left: 80px; } </style>
+<style type="text/css">.tripletab { margin-left: 120px; } </style>
+<style type="text/css">.quadtab { margin-left: 160px; } </style>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Homework 4</b></h1>
+  <p>Make a Color Mixer and A Mile Converter.</p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+    
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container">
+      <h3><b>Question 1 & 2-Setup<b></h3>
+      <h5><span class="w3-opacity">
+          "[Setup] Begin by creating a new empty MVC project. Make sure your repo has Visual Studio's .gitignore file so it will correctly ignore all the temporary build files as well as built binary files (just like HW 3)."
+          </span></h5>
+      <h5><span class="w3-opacity">
+          "[Planning] Implement the following features in one or more feature branches. Merge each into master when finished. If things are going well with Git, try to implemement two parts of what is below in two different feature branches. Don't merge them back in until both of them are done. This will let you see a little of what can happen when two or more developers are working on the code at the same time. You'll get some practice with merge conflicts."
+      </span> </h5>
+      
+       
+    </div>
+
+    <div class="w3-container">
+        <p> 
+              It took awhile to get VisualStudio to download the correct file. Ultimately it took me downloading the sample files from class to finally get the right type of files so that I could get a new MVC file. It does build binary files, but once again, the gitignore prevents them from showing up. 
+        </p>
+        <p>
+            Indeed, git is a snarly little booger no matter what you do. I spent a lot of time opening the three branches all nice and neat, I even used little textfiles to help. It still didn't prevent having a snarly mess at the end, but my previous experiance with dealing with git messes certainly helped me deal with it in only an hour rather than, say, 5. 
+        </p>
+    </div>
+
+    </div>
+  
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        <div class="w3-container">
+          <h3><b>Question 3<b></h3>
+        </div>
+    
+        <div class="w3-container">
+                <h5> <span class="w3-opacity">
+                  "[Content/Coding] Create a “Home” default landing page that will contain links to each of the other pages you'll create in the tasks below. You must use Razor @Html.ActionLink HTML helper methods to do this. (Implied in this is that you have an appropriately named controller with action method and a suitable view.)""
+                </span></h5>
+                <p>
+                     As I recall, I used the default "HomeController" that was built by VisualStudio. If not, then I probably imitated the in-class copy.  I also hand-copied the words that appeared in the picture. I may have gotten a little creative with my copying. I was pretty loopy by that point. 
+                </p>
+               
+        </div>
+      </div>
+      
+      <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+        
+        <div class="w3-container">
+          <h3><b>Question 4<b></h3>
+          <h5> <span class="w3-opacity">
+            [Content/Coding]Simple Server-Side Dynamic page using HTTP GET Recreate the "Mile to Metric Converter" page and functionality (note the route must be the same, which affects your Controller and View names).
+          </span></h5>
+    
+        <div class="w3-container">
+          <p> 
+             I had to figure out how text boxes, labels, radio buttons and submit buttons work. Then in HomeController, I had to figure out how to get the information from these elements. The actual math was fairly easy beyond that. 
+          </p>
+          <p> 
+            This is my MileConverter code for the html page. As you can see, it has a form, textbox, radiobuttons and more. 
+          </p>
+          <code class="prettyprint">
+             <!- - &lt; &gt;
+                              @{
+                  ViewBag.Title = "Mile Converter";
+              }
+
+              &lt;h2>@ViewBag.Title&lt;/h2>
+
+              &lt;div class="row">
+                  &lt;form method="get">
+                      &lt;div class="col-md-6">
+                          &lt;p>&lt;label for="Miles">Miles</label></p>
+                          &lt;input id="MilesConv" name="miles" type="number" step="0.01" required formethod="get" />
+
+                      &lt;/div>
+
+
+                      &lt;div class="col-md-6">
+                          &lt;h3>&lt;label for="Metric">Select a unit:</label>&lt;/h3>
+                          &lt;div class="w3-container">
+                              &lt;ul style="list-style-type:none">
+                                  &lt;li>&lt;input type='radio' id='mil' name='Metric' value='millimeters' />Millimeters&lt;/li>
+                                  &lt;li>&lt;input type='radio' id='cent' name='Metric' value='centimeters' />Centimeters&lt;/li>
+                                  &lt;li>&lt;input type='radio' id='met' name='Metric' value='meters' />Meters &lt;/li>
+                                  &lt;li>&lt;input type='radio' id='kilo' name='Metric' value='kilometers' />Kilometers&lt;/li>
+                              &lt;/ul>
+                          &lt;/div>
+                          &lt;input type="submit" />
+
+                      &lt;/div>
+                  &lt;/form>
+              &lt;/div>
+              &lt;p>@ViewBag.Message</p>
+
+
+
+
+             -->
+
+
+              </code>          
+          
+      </div>
+</div>
+</div>
+
+      <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-container">
+                  <h3><b>Question 5<b></h3>
+                  <h5><span class="w3-opacity">
+                         Imitate a ColorMixer
+                  </span> </h5>
+                   
+                </div>
+            
+                <div class="w3-container">
+                    <p> 
+                         This is where the hang-ups happened. I have the code working in get, but not in post. So the code uses post until I figure out what is wrong. Also, the darned thing doesn't want to display colored boxes. It worked in my sample code, but goodness knows computers are enigmatic as heck. I hope to fix this before someone grades it.  
+                    </p>
+
+            
+                </div>
+            
+                </div>  
+
+
+    </div>  
+
+  <hr>
+</body>
+</html>
