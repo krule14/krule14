@@ -1,17 +1,25 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Mile Converter";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ViewBag.Title</h2>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="row">
+    @using (Html.BeginForm("ColorMixer", "Home", FormMethod.Post))
+    {
+        <div class="col-md-6">
+            <p><label for="Miles">Miles</label></p>
+            @Html.TextBox("miles")
+        </div>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+        <div class="col-md-6">
+            @Html.Label("Color2Label", "Second Color")
+            <div class="w3-container">
+                @Html.TextBox("Metric")
+            </div>
+            <input type="submit" />
+
+        </div>
+}
+    </div>
+<p>@ViewBag.Message</p>

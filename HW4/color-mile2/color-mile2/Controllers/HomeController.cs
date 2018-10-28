@@ -15,16 +15,15 @@ namespace color_mile2.Controllers
 
         public ActionResult MileConverter()
         {
-            ViewBag.Message = "AHAHAHA!! I FOUND IT!!";
-
-            return View();
-        }
-
-        public ActionResult ColorMixer()
-        {
             ViewBag.Message = "PHHHHTTTT! I FOUND THE THINGY!!!";
 
             return View();
         }
+        [HttpPost]
+        public ActionResult ColorMixer()
+        {
+            return View();
+        }
     }
+
 }

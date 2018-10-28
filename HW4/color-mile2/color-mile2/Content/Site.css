@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.pal {
+    width: 100px;
+    height: 100px;
+    /*Background-color: #777777;/* Your Color */
+}
