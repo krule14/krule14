@@ -1,22 +1,39 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw1 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw1 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - My ASP.NET Application</title>
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .stooges {
+            display: inline;
+            margin-left: auto;
+            margin-right: auto;
+            width: 33%;
+        }
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    </style>
 
+
+</head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
@@ -63,22 +80,22 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+             </ul>
         </div>
     </nav>
 
 
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
+
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 1 Blog</b></h1>
         </header>
-        <!-- About Card -->
+
+        <!-- Disclaimer -->
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
                 <h4><b>Whoops!</b></h4>
                 <p>
@@ -91,11 +108,106 @@
 
         </div>
 
+        <!-- Question 1- Git and GitHub-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 1- Git and GitHub</b></h4>
+                <p>
+                    <strong>[Setup]</strong> Download and install the
+                    <em>command line version</em> of the Git version control system
+                    if you don't already have it.
+                    All code you write from now on (for the entire year!)
+                    must be added and committed to a Git repository that you create
+                    and manage.  For this term I recommend that you make one repository
+                    for all your work.  Inside this repo/folder each assignment is its
+                    own folder.  So you'll have one repo and within it folders for HW1,
+                    HW2, etc.
+                </p>
+                <p></p>
+                <h4><b>Solution 1- Git Command Line</b></h4>
+                <p>
+                    I searched "Git Command Line Windows" which gave me <a href="https://git-scm.com/downloads">this site</a>.
+                </p>
+                <p>
+                    I downloaded the windows version, and installed with the boilerplate values (no changes).
+                    This gave me a desktop app called "Git Bash", which looks like this:
+                </p>
+                <img src="img\Git\git1.PNG" class="center" />
+                <p></p>
+                <p>
+                    Sure, it's doctored, but it gives you the right idea.
+                </p>
+                <p></p>
+                <h4><b>Solution 2- Github Repository</b></h4>
+                <p>
+                    Just to remind you, this blog comes to you from winter break. By this
+                    point I had already created a repository on github, and had populated it
+                    with properly named folders. Here's my
+                    <a href="https://github.com/krule14/krule14">github repository</a>,
+                    with a picture:
+                </p>
+                <img src="img\Git\gitHub.PNG" class="center" />
+                <p></p>
+                <p>
+                    ... and this is my beautiful new file system:
+                </p>
+                <div>
+                    <img src="img\Git\FilingSystem1.PNG" class="stooges" />
+                    <img src="img\Git\FilingSystem2.PNG" class="stooges" />
+                    <img src="img\Git\FilingSystem3.PNG" class="stooges" />
+                </div>
+                <p></p>
+                <p>
+                    Can someone use this information to mess with my webpage? Sure.
+                    But if someone wants to take the time out of their day to mess
+                    with some CS undergrad's silly webpage for school, they can figure
+                    out how to do it wheter I show off or not... I err on
+                    the side of hubris in this case. :P
+                </p>
+            </div>
 
         </div>
-        <!-- END w3-content -->
+
+        <!-- Question 2-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2</b></h4>
+                <p>
+                    <strong>[Setup]</strong> Create an account on GitHub or 
+                    Bitbucket.  (We'll probably use Bitbucket exclusively 
+                    Winter and Spring for our group projects, but we'll use 
+                    GitHub for part of our work this term -- so you'll end 
+                    up needing both.)  Get yourself set up and synchronize your 
+                    local repository so you're ready to develop.  Once set up 
+                    your workflow will be:
+                    <ul>
+                        <li> on your development machine, create and edit source 
+                        code files</li>
+                        <li> <code>add</code> them</li>
+                        <li> when ready, <code>commit</code>, then </li>
+                        <li> when you are ready to save or share your code,
+                        <code>push</code> to your remote repository</li>
+                    </ul> 
+                    You're the only developer so you don't have to worry
+                    about anyone else modifying your repository.  Or do you?  
+                    If you work on two machines (a laptop and a desktop) then you 
+                    are effectively two developers working on the same code. 
+                    This is what Git excels at (distributed development) but you'll 
+                    learn that as we go along.  For now, don't ever edit the files 
+                    on different machines without first <code>pull</code>ing changes
+                    and only then <code>add</code>/<code>commit</code>/<code>push</code>.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
     </div>
+        <!-- END content -->
+    
 
 
 </body>
-</html>
+
