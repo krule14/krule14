@@ -82,3 +82,30 @@ table tr:nth-child(odd) {
 table th {
     background-color: linen;
 }
+
+<style type="text/css" >
+.gist {
+    width: 500px !important;
+}
+
+.gist-file
+.gist-data {
+    max-height: 500px;
+    max-width: 100%;
+}
+</style >
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.stooges {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+}
+
