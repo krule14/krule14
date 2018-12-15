@@ -11,7 +11,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page - My ASP.NET Application</title>
+    
     <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
     <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
@@ -111,7 +111,7 @@
         <!-- Question 1- Git and GitHub-->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
-                <h4><b>Question 1- Git and GitHub</b></h4>
+                <h4><b>Question 1- Git Command Line</b></h4>
                 <p>
                     <strong>[Setup]</strong> Download and install the
                     <em>command line version</em> of the Git version control system
@@ -124,7 +124,7 @@
                     HW2, etc.
                 </p>
                 <p></p>
-                <h4><b>Solution 1- Git Command Line</b></h4>
+                <h4><b>Solution </b></h4>
                 <p>
                     I searched "Git Command Line Windows" which gave me <a href="https://git-scm.com/downloads">this site</a>.
                 </p>
@@ -138,7 +138,46 @@
                     Sure, it's doctored, but it gives you the right idea.
                 </p>
                 <p></p>
-                <h4><b>Solution 2- Github Repository</b></h4>
+
+            </div>
+
+        </div>
+
+        <!-- Question 2-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2- Github Repository</b></h4>
+                <p>
+                    <strong>[Setup]</strong> Create an account on GitHub or
+                    Bitbucket.  (We'll probably use Bitbucket exclusively
+                    Winter and Spring for our group projects, but we'll use
+                    GitHub for part of our work this term -- so you'll end
+                    up needing both.)  Get yourself set up and synchronize your
+                    local repository so you're ready to develop.  Once set up
+                    your workflow will be:
+                    <ul>
+                        <li>
+                            on your development machine, create and edit source
+                            code files
+                        </li>
+                        <li> <code>add</code> them</li>
+                        <li> when ready, <code>commit</code>, then </li>
+                        <li>
+                            when you are ready to save or share your code,
+                            <code>push</code> to your remote repository
+                        </li>
+                    </ul>
+                    You're the only developer so you don't have to worry
+                    about anyone else modifying your repository.  Or do you?
+                    If you work on two machines (a laptop and a desktop) then you
+                    are effectively two developers working on the same code.
+                    This is what Git excels at (distributed development) but you'll
+                    learn that as we go along.  For now, don't ever edit the files
+                    on different machines without first <code>pull</code>ing changes
+                    and only then <code>add</code>/<code>commit</code>/<code>push</code>.
+                </p>
+                <p></p>
+                <h4><b>Solution</b></h4>
                 <p>
                     Just to remind you, this blog comes to you from winter break. By this
                     point I had already created a repository on github, and had populated it
@@ -164,44 +203,187 @@
                     out how to do it wheter I show off or not... I err on
                     the side of hubris in this case. :P
                 </p>
+                <p>
+                    For ease, I have been using sourcetree as my primary
+                    method of interacting with Git. I have been told that
+                    apps like sourcetree are frequently used in industry.
+                    That's not to say that I don't occasionally use commandline,
+                    but it isn't my go to. Honestly, I don't feel
+                    bad about using sourcetree to make things easier. Sue me.
+                </p>
             </div>
 
         </div>
 
-        <!-- Question 2-->
+        <!-- Github Commandline Cheatsheet -->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
-                <h4><b>Question 2</b></h4>
+                <h4><b>Github Commandline Cheatsheet</b></h4>
                 <p>
-                    <strong>[Setup]</strong> Create an account on GitHub or 
-                    Bitbucket.  (We'll probably use Bitbucket exclusively 
-                    Winter and Spring for our group projects, but we'll use 
-                    GitHub for part of our work this term -- so you'll end 
-                    up needing both.)  Get yourself set up and synchronize your 
-                    local repository so you're ready to develop.  Once set up 
-                    your workflow will be:
-                    <ul>
-                        <li> on your development machine, create and edit source 
-                        code files</li>
-                        <li> <code>add</code> them</li>
-                        <li> when ready, <code>commit</code>, then </li>
-                        <li> when you are ready to save or share your code,
-                        <code>push</code> to your remote repository</li>
-                    </ul> 
-                    You're the only developer so you don't have to worry
-                    about anyone else modifying your repository.  Or do you?  
-                    If you work on two machines (a laptop and a desktop) then you 
-                    are effectively two developers working on the same code. 
-                    This is what Git excels at (distributed development) but you'll 
-                    learn that as we go along.  For now, don't ever edit the files 
-                    on different machines without first <code>pull</code>ing changes
-                    and only then <code>add</code>/<code>commit</code>/<code>push</code>.
+                    I made a cheatsheet!
                 </p>
-
+                <form action="..\..\CheatSheet\Git\GitCommandlineCheatsheet.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Go to Cheatsheet! &raquo;</b></button></p>
+                </form>
             </div>
 
         </div>
 
+        <!--Question 3- Coding  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 3- Coding</b></h4>
+                <p>
+                    <strong>[Content/Coding]</strong> Write a multi-page, hyperlinked set of web pages on a subject of your choice.  The content is irrelevant, it's the HTML and CSS that matters.  Here are some specific requirements for your work:
+                    <ul>
+                        <li> You must use <a href="https://getbootstrap.com/">Bootstrap</a> (v4) for the layout of all pages and must demonstrate both single column layout and two or more column formatting</li>
+                        <li> You must have a separate CSS file (e.g. <samp>styles.css</samp>) in which you write some of your own classes and that you use somewhere</li>
+                        <li> You'll need a navigation bar or menu that contains links to all your pages</li>
+                        <li> You need to have at least one table</li>
+                        <li> and at least two kinds of lists: <code>ol</code>, <code>ul</code> and <code>dl</code></li>
+                        <li> All main elements need to be styled consistently: use those defined by Bootstrap or use your own.  But please, no obnoxious colors or backgrounds.  You should attempt to make a professional and modern looking web page. (NO templates or theme packs!  You've got to do this yourself!)</li>
+                        <li>You must write all code yourself and may not use a WYSIWYG designer such as Dreamweaver.  Good (free) HTML and CSS aware editors include Atom, Brackets, Visual Studio Code.  When writing HTML and CSS you're doing yourself a disservice if you're not using the <a href="https://www.emmet.io/">Emmet</a> plug-in!</li>
+                    </ul>
+                </p>
+                <p></p>
+                <h4><b>Solution</b></h4>
+                <p>
+                    First, I looked for bootstrap, and found the
+                    stylesheet link <a href="https://getbootstrap.com/">here</a>.
+
+                </p>
+                <p>
+                    It looks like this:
+                </p>
+                <p>
+                    <code style="max-width:100%">
+                        &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                    </code>
+                </p>
+                <p></p>
+                <p>
+                    Then I looked at bootstrap, and looked at
+                    what kinds of pre-fab stuff it has.
+                    I found a navbar <a href="https://getbootstrap.com/docs/4.0/components/navbar/">here</a>.
+                    I stole some font code from <a href="https://www.cssfontstack.com/Baskerville">here</a>.
+                </p>
+                <p>
+                    The navbar is coded like this:
+                    <code>
+                        &lt;nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        &lt;a class="navbar-brand" href="#">Contrived Cookbook&lt;/a>
+                        &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        &lt;span class="navbar-toggler-icon">&lt;/span>
+                        &lt;/button>
+                        &lt;div class="collapse navbar-collapse" id="navbarNav">
+                        &lt;ul class="navbar-nav">
+                        &lt;li class="nav-item active">
+                        &lt;a class="nav-link" href="index.html">Home &lt;/a>
+                        &lt;li class="nav-item">
+                        &lt;a class="nav-link" href="GFRec.html">Insta-pot cook times&lt;span class="sr-only">(current)&lt;/span>&lt;/a>
+                        &lt;/li>
+                        &lt;li class="nav-item">
+                        &lt;a class="nav-link" href="Rec.html">Recipes</a>
+                        &lt;/li>
+                        &lt;/ul>
+                        &lt;/div>
+                        &lt;/nav>
+                    </code>
+                </p>
+                <p>
+                    With this CSS:
+                    <code>
+                        body {
+                        font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+                        background-color: linen;
+                        }
+
+                        nav {
+                        background-image: url("../img/tableCloth.jpg");
+                        background-size: 100px;
+
+                        }
+                        .navbar-nav, .navbar-brand {
+                        background-color: linen;
+                        border: 4px solid antiquewhite;
+                        }
+
+                        .center {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                        width: 50%;
+                        }
+                        .mainCenter {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                        width: 90%;
+                        }
+                        .background {
+                        margin: 1%;
+                        padding: 3%;
+                        background-color: #FAF4ED;
+
+                        }
+                        .twin{
+                        margin:auto;
+                        max-width: 50%;
+                        display:inline;
+                        text-align:left;
+                        //border: 10px solid red;
+
+                        }
+                        .border {
+                        margin-top: 10%;
+                        padding: 2%;
+                        background-image: url("../img/tableCloth.jpg");
+                        background-size: 100px;
+
+                        }
+                        header {
+                        margin: 5%;
+                        padding: 3%;
+                        background-color: #FAF4ED;
+                        border-radius: 30px;
+                        border: 5px solid #FAF4ED;
+                        }
+                        table {
+                        width: 100%;
+                        }
+
+                        table, th, td {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        }
+
+                        th, td {
+                        padding: 15px;
+                        text-align: left;
+                        }
+
+                        table tr:nth-child(even) {
+                        background-color: #FAF8F5;
+                        }
+
+                        table tr:nth-child(odd) {
+                        background-color: #fff;
+                        }
+
+                        table th {
+                        background-color: linen;
+                        }
+
+                    </code>
+                </p>
+                <form action="..\Project\index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Go to my project! &raquo;</b></button></p>
+                </form>
+            </div>
+
+        </div>
 
 
     </div>
