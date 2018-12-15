@@ -1,0 +1,82 @@
+﻿body {
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    background-color: linen;
+}
+
+nav {
+    background-image: url("../img/tableCloth.jpg");
+    background-size: 100px;
+    
+}
+.navbar-nav, .navbar-brand {
+    background-color: linen;
+    border: 4px solid antiquewhite;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 50%;
+}
+.mainCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+}
+.background {
+    margin: 1%;
+    padding: 3%;
+    background-color: #FAF4ED;
+
+}
+.twin{
+    margin:auto;
+    max-width: 50%;
+    display:inline;
+    text-align:left;
+    //border: 10px solid red;
+
+}
+.border {
+    margin-top: 10%;
+    padding: 2%;
+    background-image: url("../img/tableCloth.jpg");
+    background-size: 100px;
+
+}
+header {
+    margin: 5%;
+    padding: 3%;
+    background-color: #FAF4ED;
+    border-radius: 30px;
+    border: 5px solid #FAF4ED;
+}
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #FAF8F5;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table th {
+    background-color: linen;
+}
