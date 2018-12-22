@@ -6,8 +6,8 @@
 nav {
     background-image: url("../img/tableCloth.jpg");
     background-size: 100px;
-    
 }
+
 .navbar-nav, .navbar-brand {
     background-color: linen;
     border: 4px solid antiquewhite;
@@ -20,6 +20,7 @@ nav {
     text-align: center;
     width: 50%;
 }
+
 .mainCenter {
     display: block;
     margin-left: auto;
@@ -27,27 +28,28 @@ nav {
     text-align: center;
     width: 90%;
 }
+
 .background {
     margin: 1%;
     padding: 3%;
     background-color: #FAF4ED;
-
 }
-.twin{
-    margin:auto;
+
+.twin {
+    margin: auto;
     max-width: 50%;
-    display:inline;
-    text-align:left;
+    display: inline;
+    text-align: left;
     //border: 10px solid red;
-
 }
+
 .border {
     margin-top: 10%;
     padding: 2%;
     background-image: url("../img/tableCloth.jpg");
     background-size: 100px;
-
 }
+
 header {
     margin: 5%;
     padding: 3%;
@@ -55,6 +57,7 @@ header {
     border-radius: 30px;
     border: 5px solid #FAF4ED;
 }
+
 table {
     width: 100%;
 }
@@ -79,4 +82,30 @@ table tr:nth-child(odd) {
 
 table th {
     background-color: linen;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: lightgray;
+    text-decoration: none;
+    border: 2px solid lightgrey;
+ }
+
+
+.dropdown-toggle:active + .dropdown-menu {
+    display: block;
+}
+
+.input-group mb-3{
+    margin-bottom: 0px;
+}
+.dropdown-menu{
+    margin-top: 0px;
 }

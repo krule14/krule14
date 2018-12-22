@@ -1,0 +1,157 @@
+﻿
+<!DOCTYPE html>
+<head>
+
+    <title>Hw2 Project-Enter Recipes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\styles.css">
+    <script src="js/RecipeFunct.js"></script>
+
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Contrived Cookbook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="GFRec.html">Insta-pot cook times</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Rec.html">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="EnterRec.html">Enter Your Recipes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="border center">
+        <header>
+            <h2>Enter your recipe here!</h2>
+        </header>
+    </div>
+    <div class="border mainCenter">
+        <div class="background">
+            <h5>Your Recipe:</h5>
+
+            <table id="Ingredient_Table">
+                <thead>
+                    <tr>
+                        <th>
+                            Amounts
+                        </th>
+                        <th>
+                            Ingredients
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <br />
+            <table id="Instruction_Table">
+                <thead>
+                    <tr>
+                       
+                        <th>
+                            Instructions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <p></p>
+            <p id="errSpot"></p>
+            <p>
+                Please input ingredients and instructions below.
+                When you have finished with your recipe, please click here:
+                <div class="col-sm">
+                    <a class="btn btn-light" href="thankYouPage.html" role="button">Finish &raquo;</a>
+                 
+                </div>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="border mainCenter">
+        <div class="background">
+            <h4>Add Ingredient</h4>
+            <p></p>
+            <p id="errIngredSpot">
+             
+            </p>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Amount</span>
+                            </div>
+                            <input id="unit" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="1 tsp">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="input-group input-group-sm mb-3" ">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm">Ingredient</span>
+                            </div>
+                            <input id="ingred" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Sage">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <input class="btn btn-light" onclick="addIngredient()" type="submit" value="Add Ingredient">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border mainCenter">
+        <div class="background">
+            <h4>Add Instruction</h4>
+            <p></p>
+            <p id="errInstructSpot"></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-">
+                        <div class="form-group">
+                            <textarea class="form-control rounded-0" id="instruct" cols="100" placeholder="Place dough in oven for 30 mins"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <input class="btn btn-light" onclick="addInstructions()" type="submit" value="Add Instruction">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
