@@ -17,7 +17,11 @@
 
     <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
     <style>
-
+        .imgCenter {
+            max-width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
 
     </style>
 
@@ -82,39 +86,215 @@
             <h1><b>Homework 2 Blog</b></h1>
         </header>
 
-        <!-- Disclaimer -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
-                <p>
-                    This blog isn't finished yet!
-                </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
-                </form>
-            </div>
-        </div>
-
         <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
                 <h4><b>Question 1</b></h4>
                 <p>
-                    <strong>[Setup]</strong> 
+                    <strong>[Setup]</strong>
                     Create a new folder in your Git repository
-                    , preferably named <samp>HW2</samp>. 
-                    Create a new feature branch for your 
+                    , preferably named <samp>HW2</samp>.
+                    Create a new feature branch for your
                     work on this homework, check it out and
                     proceed.  Create an <samp>index.html</samp>
-                    and stylesheet (e.g. <samp>styles.css</samp>) 
+                    and stylesheet (e.g. <samp>styles.css</samp>)
                     directly in that folder.  Write your CSS in this
-                    stylesheet file.  You can write the Javascript 
+                    stylesheet file.  You can write the Javascript
                     directly in the html file if you want.
                 </p>
-                
+                <p></p>
+                <h4><b>Solution </b></h4>
+                <div class="col-6">
+                    <img src="img\HwProjFiles.PNG" class="imgCenter" />
+                </div>
+                <p>
+                    As you can see, I have a folder for CSS, images, and javascript. I have also created a new homework folder labeled "Hw2".
+                </p>
+                <p>
+                    Also, I 100% cheated by re-using homework 1's pages and stylesheet. As I recall, we were allowed to do this, so I guess it's not actually cheating.
+                </p>
+
             </div>
 
         </div>
+
+        <!-- Question 2 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2</b></h4>
+                <p>
+                    <strong>[Planning & Design]</strong>
+                    Think for a bit about what you'd like to
+                    do.  You need to take input from the user
+                    , do some calculation and then provide
+                    the output/answer back to the user by modifying
+                    elements on the page and adding new elements.
+                </p>
+                <p>
+                    Here's an example that is too
+                    easy: a page that lets the user convert a
+                    temperature in Celsius to Fahrenheit.
+                    In this example you'd need a text input
+                    for the Celsius temperature, a "Convert"
+                    button and a location for the output like
+                    a paragraph element with "Answer: " text.
+                    When the button is pressed, your Javascript
+                    callback function is executed which uses
+                    jQuery to retrieve the temperature, plain
+                    Javascript to calculate the correct temperature
+                    in Fahrenheit and then jQuery to change the
+                    text in that paragraph element.
+                </p>
+                <p>
+                    This example, however, isn't good enough
+                    because it only uses two form elements and doesn't
+                    create a list or table element.  (There's another
+                    example linked from the main class page that
+                    is a little closer.  It generates a table but
+                    only uses one input element, doesn't use Bootstrap
+                    and can be broken -- try a date that is clearly
+                    out of range.)
+                </p>
+                <p>
+                    Do something fun, not too complicated, and interesting.
+                </p>
+                <h4><b>Solution </b></h4>
+                <p>
+                    My plan was to create a place for users
+                    to input a recipe. It won't actually keep the recipe's of course,
+                    but it pretends to by going to a "thank you" page. Whenever
+                    the user inputs an ingredient or instruction and hits the appropriate
+                    enter button, it will add the entry to a table of ingredients or instructions
+                    respectively.
+                </p>
+
+
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 3</b></h4>
+                <p>
+                    <strong>[Planning & Design]</strong>
+                    Create a wireframe or sketch of your page
+                    to help you with the design.  A good idea
+                    is to overlay it with the rows and columns
+                    of your selected Bootstrap grid, and plan
+                    for how it will look when the page is
+                    resized.  Label it with with the
+                    <code>container</code>, <code>row</code>,
+                    and column classed elements to visualize
+                    your layout.  (Remember that you can open
+                    a Bootstrap page, like this one, in a
+                    browser and visualize the HTML elements
+                    and styling with the inspector from the
+                    developer's tools, as shown in class.)
+                </p>
+                <h4><b>Solution </b></h4>
+                <img src="img\Wireframe.PNG" class="imgCenter" />
+                <p>
+                    Since no plan survives first contact with implimentation,
+                    my website looks slightly different than the wireframe would suggest,
+                    but it was close enough to give me a solid idea of what to do.
+                </p>
+
+            </div>
+
+        </div>
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 4</b></h4>
+                <p>
+                    <strong>[Content/Coding]</strong>
+                    Create your working page, remembering to
+                    style it nicely and to use Bootstrap for
+                    your layout.  As with HW 1, you'll need a
+                    minimum of 2 files: <samp>index.html</samp>
+                    and <samp>styles.css</samp> plus a
+                    <samp>*.js</samp> file if you feel like
+                    putting your javascript in a separate file also.
+                </p>
+                <h4><b>Solution </b></h4>
+                <img src="img\HwProjFiles.PNG" class="imgCenter" />
+                <p>
+                    Yup, way ahead of you.
+                </p>
+
+
+            </div>
+
+        </div>
+        <!-- Question 5-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 5</b></h4>
+                <p>
+                    <strong>[Test]</strong> Commit and
+                    push your work frequently on your
+                    feature branch but don't merge until
+                    you are happy with it and have tested
+                    it thoroughly.  For example, it should
+                    not fail if you're expecting a number
+                    and the user types in an arbitrary
+                    string.  A feature branch should continue
+                    until the feature is finished
+                    <b>and tested</b> before merging
+                    into any main release branch.
+                </p>
+                <p>
+                    To make sure your feature branch
+                    shows up in the commit history, at some
+                    point make sure to put at least one
+                    commit on <code>master</code>
+                    <strong>before merging</strong>.
+                    The actual work in the commit doesn't matter;
+                    you could just edit the README.
+                    This will advance that branch past the
+                    branching point and will leave it nicely visible.
+                </p>
+                <h4>Solution</h4>
+                <p>
+                    Ha ha... about that. Erm... I get so focused on getting
+                    stuff done that I usually only commit at the end of the day
+                    and sometimes not even that. So on this feature branch, theres
+                    only like a handful of commits. I will take your advice
+                    and make a little hello world textfile on the main branch though.
+                </p>
+
+            </div>
+
+        </div>
+        <!-- Question 7-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 6</b></h4>
+                <p>
+                    <strong>[Portfolio Content]</strong>  Everything goes into your Portfolio: writeup of important HTML + CSS + Javascript (especially the JS since that's what this is about), css, nicely commented of course, a screenshot of the rendered webpage, your wireframe, link to the working page and any notes you've generated. (You are keeping notes of what you're learning, right?)
+
+                </p>
+
+                <h4>Solution</h4>
+                <p>Here's the Html page:</p>
+                <script src="https://gist.github.com/krule14/c36aad23991bd6b91b8e1a33a1b1db20.js"></script>
+                <p></p>
+                <p> Here's the CSS </p>
+                <script src="https://gist.github.com/krule14/39bbbcba93737f737a969d6eb55b0288.js"></script>
+                <p> And finally, the javascript:</p>
+                <script src="https://gist.github.com/krule14/8884ea472bac7992f78f8c5eb00f4a87.js"></script>
+                <br />
+                <p> Oh, and some cheatsheets here:</p>
+                <form action="..\..\CheatSheet\Hw2CssStuff.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
+                </form>
+
+            </div>
+
+        </div>
+
+
         <!-- "Check out the code" -->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">

@@ -92,12 +92,20 @@ table th {
     text-align: center;
 }
 
-    .dropdown-item:hover {
-        background-color: lightgray;
-        text-decoration: none;
-        border: 2px solid lightgrey;
-    }
+.dropdown-item:hover {
+    background-color: lightgray;
+    text-decoration: none;
+    border: 2px solid lightgrey;
+ }
 
-.dropdown:hover > .dropdown-menu {
+
+.dropdown-toggle:active + .dropdown-menu {
     display: block;
+}
+
+.input-group mb-3{
+    margin-bottom: 0px;
+}
+.dropdown-menu{
+    margin-top: 0px;
 }
