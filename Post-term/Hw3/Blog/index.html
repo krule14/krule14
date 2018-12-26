@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw3 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw3 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,19 +73,18 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 3 Blog</b></h1>
         </header>
+        
         <!-- About Card -->
         <div class="w3-card w3-margin w3-margin-top">
             <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
@@ -92,10 +101,190 @@
         </div>
 
 
+        <!-- Question 1 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 1</b></h4>
+                <p>
+                    <strong>[Setup]</strong> Get your development environment set-up: download and install <a href="https://visualstudio.microsoft.com/">Visual Studio IDE</a>.  (Community 2017 free version is fine); DO NOT USE THE MAC VERSION.  It is not the same product and will not do what we need this year.
+                </p>
+                <p></p>
+                <h4><b>Solution </b></h4>
+                <img class="imgCenter" src="img\VisualStudio.PNG" />
+                <p></p>
+                <p>
+                    Well, Seeing as I have been coding this blog on VS community 2017,
+                    I think that's that requirement done. :p
+                </p>
+
+            </div>
+
         </div>
-        <!-- END w3-content -->
+
+        <!-- Question 2 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2</b></h4>
+                <p>
+                    <strong>[Setup]</strong> Download the Java application provided in javacode2.zip.  Review the code; and compile and run to learn what it does.  This version is different from last year.
+                </p>
+
+                <h4><b>Solution </b></h4>
+                <p>
+
+                </p>
+
+
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 3</b></h4>
+                <p>
+                    <strong>[Planning & Design]</strong> Your job is to replicate (i.e. translate) this Java program but in C#.  You should write a C# console application from scratch that does exactly what the Java version does.  <strong>Do not copy and paste the code.  Type it in and translate as you go.  Let me repeat. DO NOT COPY, PASTE and then TRY TO FIX THE ERRORS!</strong>
+                </p>
+                <h4><b>Solution </b></h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 4 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 4</b></h4>
+                <p>
+                    <strong>[Content/Coding]</strong> Start a new C# console application whose code is inside a HW3 folder in your Git repository.  Add and commit your project files and code just like normal, but do use Visual Studio's <samp>.gitignore</samp> file so that the multitude of unnecessary files are not shouting to be added to Git.  As with the last homework, <strong>all work for this homework should be done in a new feature branch with multiple commits over time.</strong>
+
+                </p>
+                <h4><b>Solution </b></h4>
+
+                <p>
+
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+        <!-- Question 5-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 5</b></h4>
+                <p><strong>[Content/Coding]</strong> Write C# class files and code as necessary to duplicate the behavior of the required code.  You should try to stick as close as possible to the Java code, so translate it -- don't do it your own way.  This is because I have purposefully chosen certain language features that I want you to learn in C#.</p>  <p>Don't try to copy in the Java code and edit it to fix errors.  You want to write it from scratch so you begin to learn the Visual Studio IDE style of development (i.e. code completion, IntelliSense, looking up documentation, keyboard shortcuts ...).  You should have multiple commits showing how you wrote this from scratch.</p>
+                <p>I highly suggest that you implement the classes in this order:</p>
+                <ol>
+                    <li><samp>Node.java</samp> &longrightarrow; <samp>Node.cs</samp></li>
+                    <li><samp>QueueInterface.java</samp> &longrightarrow; <samp>?.cs</samp></li>
+                    <li><samp>QueueUnderflowException.java</samp> &longrightarrow; <samp>QueueUnderflowException.cs</samp></li>
+                    <li><samp>LinkedQueue.java</samp> &longrightarrow; <samp>LinkedQueue.cs</samp></li>
+                    <li><samp>Main.java</samp> &longrightarrow; <samp>?.cs</samp></li>
+                </ol>
+
+                <h4>Solution</h4>
+                <p>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 6-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 6</b></h4>
+                <p><strong>[Content/Coding]</strong> Where the syntax is identical between C# and Java you of course do not need to change anything.  However, C# makes use of new language features to solve common tasks <strong>and you should learn and use those (looking at you properties)</strong>.  Little things are important, for example C# has a <code>String</code> class but <a href="https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/general-naming-conventions">convention</a> says you use the <code>string</code> type name -- so please do that. Please follow all C# conventions for naming things (names that start with upper case for example).  The code does not have to be 100% exactly the same as long as the behavior is the same.  Yes, you'll need to find the equivalent of <code>System.out.println</code>, <code>LinkedList</code>, <code>StringBuilder</code>, generics, ...  Don't worry about making accessibility modifiers the same.</p>
+                <p>You must implement and use the linked queue as was done in the java code, but you should use C#'s linked list or equivalent.</p>
+
+                <h4>Solution</h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 7-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 7</b></h4>
+                <p>
+                    <strong>[Test]</strong> Test your code from the command line.  Make sure it generates output identical to the java code.
+                </p>
+
+                <h4>Solution</h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 8-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 8</b></h4>
+                <p>
+                    <strong>[Portfolio Content]</strong> When finished with your nicely commented, professional looking code, add a new page for it to your Portfolio (with screenshots to demonstrate it in action), and make sure it is pushed to your remote repository.</li>
+
+                </p>
+
+                <h4>Solution</h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the project!</b></h4>
+
+                <form action="..\Project\index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Project &raquo;</b></button></p>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
+                <p>
+                    The code is in my github repository, see it here:
+                </p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
+                </form>
+            </div>
+
+        </div>
+
+
     </div>
+    <!-- END content -->
+
 
 
 </body>
-</html>
+

@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw4 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw4 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,19 +73,18 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 4 Blog</b></h1>
         </header>
+
         <!-- About Card -->
         <div class="w3-card w3-margin w3-margin-top">
             <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
@@ -92,10 +101,201 @@
         </div>
 
 
+        <!-- Question 1 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 1</b></h4>
+                <p>
+                    <strong>[Planning]</strong> Implement the following <i>features</i> in one or more feature branches.  Merge each into master when finished. If things are going well with Git, try to implemement two parts of what is below in two different feature branches.  Don't merge them back in until both of them are done.  This will let you see a little of what can happen when two or more developers are working on the code at the same time.  You'll get some practice with merge conflicts.
+                </p>
+                <p></p>
+                <h4><b>Solution </b></h4>
+
+                <p></p>
+                <p>
+
+                </p>
+
+            </div>
+
         </div>
-        <!-- END w3-content -->
+
+        <!-- Question 2 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2</b></h4>
+                <p><strong>[Content/Coding]</strong> Create a &ldquo;Home&rdquo; default landing page that will contain links to each of the other pages you'll create in the tasks below.  You must use Razor <code>@Html.ActionLink</code> HTML helper methods to do this.  (Implied in this is that you have an appropriately named controller with action method and a suitable view.)</p><p>Below is a basic example.  Feel free to reproduce this one or make it your own, but note that yours should look at least as nice and all the routes should be the same, i.e. <samp>hostname/Home</samp> or just <samp>hostname/</samp>.  This will be explained in the video at the very bottom.</p>
+                
+                <h4><b>Solution </b></h4>
+                <p>
+
+                </p>
+
+
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 3</b></h4>
+                <p>
+                <p><strong>[Content/Coding]</strong><span class="problem-topic">Simple Server-Side Dynamic page using HTTP GET</span> Recreate the "Mile to Metric Converter" page and functionality (note the route must be the same, which affects your Controller and View names) shown here:</p>                                        
+                
+
+                <p>This is as it appears after the user has typed a number in the Miles input, selected Kilometers and clicked the Convert button.  The answer appears below. Note the route.</p>
+
+                <p>You must write the form elements yourself using only HTML -- no Razor HTML helpers are allowed for this page.  Your controller action method must use GET only and can't have any parameters -- you need to get the form data out of the <code>Request</code> object.</p>
+                <p>  This page demonstrates that that you can write a simple HTML form, send data to the server as query strings, extract that data within a controller action method by using the <code>Request</code> object, perform some computation with it, and finally pass data to a view which builds a new page for the user containing the resulting new, procedurally created, content.</p>
+
+                <p>
+                    Now is a great time to start using the debugging and inspection tools available to you:
+                    <ul>
+                        <li>developer tools in the browser</li>
+                        <li><code>Debug.WriteLine</code> and the debug output window in Visual Studio</li>
+                        <li>Visual Studio's very nice debugger (set a break point and then run with <samp>F5</samp> rather than <samp>Ctrl-F5</samp>)</li>
+                        <li>Use <a href="https://www.getpostman.com/apps">Postman</a></li>
+                    </ul>
+                </p>
+                <p>You should be able to inspect the page, form values leaving the browser, form values received by the server (localhost in this case) and anything else going on in ASP.NET.</p>
+
+                    <h4><b>Solution </b></h4>
+                    <p>
+
+
+                    </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 4-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 4</b></h4>
+                <p>
+                <p>
+                    <strong>[Content/Coding]</strong><span class="problem-topic">Simple Server-Side Dynamic page using HTTP POST</span>
+                    Recreate this Color Mixer page:
+                </p>
+               
+                <p>Here are some requirements for this page:</p>
+                <ol type='a'>
+                    <li>You must use Razor's HTML Helpers for all form input elements (2 input elements for the colors plus the form itself) </li>
+                    <li>You must POST the data to your app</li>
+                    <li>
+                        Your controller action method must use parameter binding to retrieve the form data.  i.e. this parameter binding would work for a form that sent two integers and a string in the body of a HTTP POST:
+<pre><code class="language-csharp">[HttpPost]
+public ActionResult MyPage(int? id, int? size, string kind)
+{
+    //...
+}</code></pre>
+                    </li>
+                    <li>To mix colors you can make up an algorithm or use this one: add the red components together, add the green together, and add the blues together, then if any of the values is greater than 255, set it to 255, i.e. clip it at the maximum value of 255 or FF.  That's what my version does.  C# has <code>Color</code> and <code>ColorTranslator</code> classes to help with this a bit.</li>
+                    <li>Make your page robust so that if, for example, the user doesn't enter a color, or they type something that isn't a hexadecimal HTML color, no errors are generated and you tell them that it's required.  This is generally referred to as form validation.  I suggest you do it client side using HTML (not javascript) and also server side with C#.  <strong>Always validate your input before using!!!</strong></li>
+                </ol>
+
+
+                </p>
+
+                <h4>Solution</h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Question 5 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 5</b></h4>
+                <strong>[Requirements]</strong>  Here's a video walkthrough to help you get all the pieces right.  I explain how each page works and explain the requirements further. <strong>  So the video capture (OBS Studio) would capture the input validation popups I had to record full screen, which made the video huge.</strong>
+                <video controls width="800">
+                    <source src="http://www.wou.edu/~morses/classes/cs46x/assignments/2018-10-12_16-01-11.mp4" type="video/mp4">
+                    <p>Your browser doesn't support HTML5 video.  Here is a <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/2018-10-12_16-01-11.mp4">link to the video</a> instead.</p>
+                </video>
+                <h4><b>Solution </b></h4>
+
+                <p>
+
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+        <!-- Question 6-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 6</b></h4>
+                <p>
+                    <strong>[Turn It In]</strong> Finally, <code>merge</code> your feature branches back into master and <code>push</code> to your remote repository.
+                </p>
+                <h4>Solution</h4>
+                <p>
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Question 7-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 7</b></h4>
+                <p>
+                    <strong>[Portfolio Content]</strong>  Lastly, put it all in your Portfolio as usual.  We need screenshots or a video to be able to tell if it's working.  Now that we're into ASP.NET MVC there is a lot more code in your project.  We don't want it all though; for your Portfolio, only include the code you write.  Just include it as snippets, with some nice explanations in between!
+                </p>
+                <h4>Solution</h4>
+                <p>
+
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the project!</b></h4>
+
+                <form action="..\Project\index.html">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Project &raquo;</b></button></p>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
+                <p>
+                    The code is in my github repository, see it here:
+                </p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
+                </form>
+            </div>
+
+        </div>
+
+
     </div>
+    <!-- END content -->
+
 
 
 </body>
-</html>
+
