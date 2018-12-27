@@ -1,4 +1,55 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Color Chooser";
 }
 <h2>@ViewBag.Title.</h2>
+
+
+
+<div class="row">
+    <form method="get">
+        <div class="col-sm-6">
+            <p>
+                <strong>Color 1:</strong>
+                <input name="Color1" placeholder="Hex color here" type="number" step="0.01" required />
+            </p>
+            <p>
+                <strong>Color2:</strong>
+                <input name="Color2" placeholder="Hex color here" type="number" step="0.01" required />
+            </p>
+            <input type="submit" />
+        </div>
+
+    </form>
+</div>
+<br />
+<div class="row" style="max-width:70%">
+    <div class="col-sm-2">
+        <table class="colorbox" style="color:blue; background-color:blue;">
+            <tr>
+                <td>---</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-1">
+        +
+    </div>
+    <div class="col-sm-2">
+        <table class="colorbox" style="color:blue; background-color:blue;">
+            <tr>
+                <td>---</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-1">
+        =
+    </div>
+    <div class="col-sm-2">
+        <table class="colorbox" style="color:blue; background-color:blue;">
+            <tr>
+                <td>---</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
