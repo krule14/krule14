@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Converter";
+}
+<h2>@ViewBag.Title</h2>
+
+
+
+<div class="row">
+    <form method="get">
+        <div class="col-sm-6">
+
+            <strong>Miles:</strong>
+            <input name="Miles" placeholder="Type Miles here..." type="number" step="0.01" required />
+
+            <!--type="number" step="0.01" required formethod="get"-->
+
+        </div>
+
+        <div class="col-sm-6">
+            <p></p>
+            <p>
+                <strong>Select a Unit</strong>
+            </p>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" method="get">
+                <ul style="list-style:none;">
+                    <li>
+                        <input type="radio" value="Millim" name="Metric" required /> Millimeters
+                    </li>
+                    <li>
+                        <input type="radio" value="Centim" name="Metric" /> Centimeters
+                    </li>
+                    <li>
+                        <input type="radio" value="M" name="Metric" /> Meters
+                    </li>
+                    <li>
+                        <input type="radio" value="Kilom" name="Metric" /> Kilometers
+                    </li>
+                </ul>
+            </div>
+            <input type="submit" />
+        </div>
+    </form>
+</div>
+
+<p style="color:tomato;"> @ViewBag.Message</p>
