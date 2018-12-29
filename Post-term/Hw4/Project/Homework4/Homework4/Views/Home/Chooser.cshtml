@@ -1,21 +1,23 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Color Chooser";
 }
 <h2>@ViewBag.Title.</h2>
 
-
+<p style="color:tomato;"> @ViewBag.err</p>
+@ViewBag.Color1
+@ViewBag.Color2
+@ViewBag.Result
 
 <div class="row">
-    <form method="get">
+    <form method="post">
         <div class="col-sm-6">
             <p>
                 <strong>Color 1:</strong>
-                <input name="Color1" placeholder="Hex color here" type="number" step="0.01" required />
+                <input name="Color1" placeholder="Hex color here" required />
             </p>
             <p>
                 <strong>Color2:</strong>
-                <input name="Color2" placeholder="Hex color here" type="number" step="0.01" required />
+                <input name="Color2" placeholder="Hex color here" required />
             </p>
             <input type="submit" />
         </div>
@@ -25,7 +27,7 @@
 <br />
 <div class="row" style="max-width:70%">
     <div class="col-sm-2">
-        <table class="colorbox" style="color:blue; background-color:blue;">
+        <table class="colorbox" style="color: #@ViewBag.Color1 ; background-color: #@ViewBag.Color1 ;">
             <tr>
                 <td>---</td>
             </tr>
@@ -35,7 +37,7 @@
         +
     </div>
     <div class="col-sm-2">
-        <table class="colorbox" style="color:blue; background-color:blue;">
+        <table class="colorbox" style="color: #@ViewBag.Color2 ; background-color: #@ViewBag.Color2 ;">
             <tr>
                 <td>---</td>
             </tr>
@@ -45,7 +47,7 @@
         =
     </div>
     <div class="col-sm-2">
-        <table class="colorbox" style="color:blue; background-color:blue;">
+        <table class="colorbox" style="color: #@ViewBag.Result ; background-color: #@ViewBag.Result ;">
             <tr>
                 <td>---</td>
             </tr>
