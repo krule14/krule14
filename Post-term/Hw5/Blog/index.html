@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw4 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw5 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,39 +73,177 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
-            <h1><b>Homework 5 Blog</b></h1>
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
+            <h1><b>Homework 4 Blog</b></h1>
         </header>
-        <!-- About Card -->
+        
+        <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
+                <h4><b>Question 1</b></h4>
                 <p>
-                    This blog isn't finished yet!
+                    <strong>[Setup]</strong> Begin by creating a new empty MVC project in your repository.  Create a simple home landing page that will serve as the home page for this app.  Put links here for pages you create later.
+
                 </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
-                </form>
+                <p></p>
+                <h4><b>Solution </b></h4>
+                <img class="imgCenter" src="img/HomePage.PNG" />
+                <p></p>
+                <p>
+
+                </p>
+
             </div>
 
         </div>
 
+        <!-- Question 2 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 2</b></h4>
+                <p><strong>[Planning &amp; Design]</strong> What do you do when your refrigerator stops working?  If you're lucky enough to be living in Campus Apartments then you can simply go to your landlord's website and submit a request for maintenance.  Explain what is wrong and voila, your super responsive and caring building manager will come running to fix or replace it.</p>
+                <img class="imgCenter" src="img/Example.PNG" />
+
+                <p>We want to make an online version of this form for renters plus a page for the building manager.  So two pages (in addition to the home landing page): one for renters to fill out and submit this form, and another for the building manager to view all current requests, sorted by date and time submitted.  The following questions suggest how you should go about this.
+
+                <p>Include everything you see in the form. All inputs are required and can't be empty strings.  The phone number must be in a valid phone number format.  The Unit number must be an integer (yes I know apartment numbers frequently appear like '7B'). I count 7 form input elements. <em>You'll also need to timestamp these requests, but you should do that server-side (why?).</em></p>
+                <p>Styling is up to you.</p>
+                <h4><b>Solution </b></h4>
+                <img class="imgCenter" src="img/Tennet.PNG" />
+                <img class="imgCenter" src="img/Rentor.PNG" />
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 3</b></h4>
+                <p><strong>[Content/Coding]</strong> Start with the data model:</strong>  design and create the database, which will have only a single table that uses an integer primary key.  Use appropriate data types for the data fields in the form plus the timestamp and anything else you want to store.    Use the scripts from the example in lecture to create the database and populate it with a few example entries.  This means you'll have one script to create the table and populate, or seed, it with at least 5 entries (<code>up.sql</code>) and a separate script to clear it all away (<code>down.sql</code>).  Both of these need to be in your <code>App_Data</code> folder and need to be in your Git repository.</p>
+                <p>You can create the database using SQL Server, SQL Server Express or LocalDB.  The first two of these require a separate installation.  LocalDB comes with Visual Studio, provided you installed the data storage and processing workload when installing VS, and can be accessed through the Server Explorer tab.  For now the database is local to your machine.  Anyone wanting to duplicate your project from your Git repository would have to manually create the database, run your up script on it and then edit the connection string.</p>
+
+                <h4><b>Solution </b></h4>
+                <script src="https://gist.github.com/krule14/3141532ae8fc61f7fdc5963d9133c59b.js"></script>
+                <script src="https://gist.github.com/krule14/708a1f38e7219823710e1458b3cc768a.js"></script>
+                <script src="https://gist.github.com/krule14/e58ae6a46951de1d2f0cbd0d76768047.js"></script>
+            </div>
 
         </div>
-        <!-- END w3-content -->
+
+        <!-- Question 4-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 4</b></h4>
+
+                <p><strong>[Content/Coding]</strong> Create the model class and the database context class: manually write the model class and the db context class.  The model should go in the Models folder while the context class should go in a new folder called DAL, for Data Access Layer.  This is a common pattern to use when separating the data layer from your data processing layer and is also the pattern used in the Pro MVC book.</p>
+
+                <h4>Solution</h4>
+                <script src="https://gist.github.com/krule14/3141532ae8fc61f7fdc5963d9133c59b.js"></script>
+                <script src="https://gist.github.com/krule14/fb58100a9cddfb79b9e04dcd0407eb07.js"></script>
+
+            </div>
+
+        </div>
+
+        <!-- Question 5 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 5</b></h4>
+                <p><strong>[Content/Coding]</strong> Connect your MVC app to the database: add the correct connection string to <code>Web.config</code>.  Can your code access the 5 seeded requests in the database?</p>
+
+                <h4><b>Solution </b></h4>
+                <script src="https://gist.github.com/krule14/5301cf9a40aab896cc8fed3e886dd0aa.js"></script>
+                
+            </div>
+
+        </div>
+
+        <!-- Question 6 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 6</b></h4>
+                <p><strong>[Content/Coding]</strong> Create controller and action methods.  Use the GET-POST-Redirect pattern for the create functionality (aka <a href="https://en.wikipedia.org/wiki/Post/Redirect/Get">Post/Redirect/Get</a>).  For viewing current requests you'll make what is commonly referred to as a list view.</p>
+                <p>In the next section you'll create <strong>strongly typed views</strong>.  This means you're passing an instance of a Model class back and forth between the controller action method and the views.  So you're definitely NOT using the <code>Request</code> object or <code>FormCollection</code> to get the form values as you did in HW 4.</p>
+
+                <h4><b>Solution </b></h4>
+                <script src="https://gist.github.com/krule14/368663410c100cef1c03ae0acf821373.js"></script>
+
+            </div>
+
+        </div>
+
+        <!-- Question 7 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 7</b></h4>
+
+                <p><strong>[Content/Coding]</strong>  Create strongly typed views. Then write Razor code to create the UI as you wish.  You'll need a minimum of two pages: one to fill out and submit a new request and another page to view all requests (show them in a table, sorted in oldest-first order by timestamp, to the minute or better).  The look and feel of the site is up to you.</p>
+                <p>You should write the views yourself for maximum learning and understanding.  Sure, take a look at some scaffolded code as examples but then write it yourself.  Plus, the scaffolded views look pretty dismal.</p>
+
+
+                <h4><b>Solution </b></h4>
+                <script src="https://gist.github.com/krule14/c5e89e7a3064075fcb21e33d9c42444c.js"></script>
+
+
+            </div>
+
+        </div>
+
+        <!-- Question 8 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Question 8</b></h4>
+
+                <p><strong>[Testing]</strong> Demo your site: fill out the form, click a button to submit, then be taken to either a thank you page or a page showing all current requests, including the one just entered.  Make sure validation works.  The very first time you view requests you should see the 5 examples that you seeded your db with, and then the requests will just build up as you enter new ones.</p>
+                <p>Hey, now's a great time to make a 1-2 minute video to link to in your Portfolio!</p> 
+
+                <h4><b>Solution </b></h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tcyzeiAPOjU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+             </div>
+
+        </div>
+
+       
+    <!-- "Check out the code" -->
+    <div class="w3-card w3-margin w3-margin-top">
+        <div class="w3-container w3-white">
+            <h4><b>Check out the project!</b></h4>
+
+            <form action="..\Project\index.html">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Project &raquo;</b></button></p>
+            </form>
+        </div>
+
     </div>
 
 
+    <!-- "Check out the code" -->
+    <div class="w3-card w3-margin w3-margin-top">
+        <div class="w3-container w3-white">
+            <h4><b>Check out the code!</b></h4>
+            <p>
+                The code is in my github repository, see it here:
+            </p>
+            <form action="https://github.com/krule14/krule14">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
+            </form>
+        </div>
+
+    </div>
+
+
+    </div>
+    <!-- END content -->
+
+
+
 </body>
-</html>
+
