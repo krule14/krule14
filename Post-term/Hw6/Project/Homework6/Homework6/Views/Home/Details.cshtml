@@ -1,0 +1,115 @@
+﻿@model Homework6.Models.FrontViewModel.FEViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="row">
+    <br />
+
+    <div class="col-md-8">
+        <a href="https://ibb.co/drcvhxV" width="200" height="40"><img src="https://i.ibb.co/1LnNSjP/Null-Photo.png" alt="@Model.People.Photo" border="0" height="200"></a>
+    </div>
+
+    <div class="col-md-8">
+
+        <div id="id-desc">
+            <h3>@Model.People.FullName</h3>
+            <dl class="dl-horizontal">
+                <dt>@Html.Label("preferred-name", "Perferred Name: ")</dt>
+                <dd>@Html.DisplayFor(model => model.People.PreferredName)</dd>
+
+                <dt>@Html.Label("phone", "Phone: ")</dt>
+                <dd>@Html.DisplayFor(model => model.People.PhoneNumber)</dd>
+
+                <dt>@Html.Label("fax", "Fax: ")</dt>
+                <dd>@Html.DisplayFor(model => model.People.FaxNumber)</dd>
+
+                <dt>@Html.Label("email", "Email: ")</dt>
+                <dd>
+                    <a href="mailto:@Html.DisplayFor(model => model.People.EmailAddress)">@Html.DisplayFor(model => model.People.EmailAddress)</a>
+                </dd>
+
+                <dt>@Html.Label("member", "Member Since: ")</dt>
+                <dd>@Html.DisplayFor(model => Model.People.ValidFrom)</dd>
+            </dl>
+        </div>
+
+        @if (ViewBag.display)
+        {
+            <div id="id-desc">
+                <h3>Company Profile</h3>
+                <dl class="dl-horizontal">
+                    <dt>@Html.Label("cust-name", "Company: ")</dt>
+                    <dd>@Html.DisplayFor(model => model.Customers.CustomerName)</dd>
+
+                    <dt>@Html.Label("cust-phone", "Phone: ")</dt>
+                    <dd>@Html.DisplayFor(model => model.Customers.PhoneNumber)</dd>
+
+                    <dt>@Html.Label("cust-fax", "Fax: ")</dt>
+                    <dd>@Html.DisplayFor(model => model.Customers.FaxNumber)</dd>
+
+                    <dt>@Html.Label("cust-web", "Website: ")</dt>
+                    <dd>
+                        <a href="@Html.DisplayFor(model => model.Customers.WebsiteURL)">@Html.DisplayFor(model => model.Customers.WebsiteURL)</a>
+                    </dd>
+
+                    <dt>@Html.Label("cust-time", "Member Since: ")</dt>
+                    <dd>@Html.DisplayFor(model => model.Customers.ValidFrom)</dd>
+                </dl>
+            </div>
+
+            <div id="id-desc">
+                <h3>Purchase History Summary</h3>
+                <dl class="dl-horizontal">
+                    <dt>@Html.Label("order", "Order: ")</dt>
+                    <dd>@ViewBag.OrderCount</dd>
+
+                    <dt>@Html.Label("grossale", "Gross Sales: ")</dt>
+                    <dd>@ViewBag.GrossSales</dd>
+
+                    <dt>@Html.Label("grossprofit", "Gross Profit: ")</dt>
+                    <dd>@ViewBag.GrossProfit</dd>
+                </dl>
+            </div>
+
+            <div id="id-desc">
+                <h3>Items Purchased</h3>
+                <h6>(10 Highest by Profit)</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">@Html.Label("stock", "StockItemID: ")</th>
+                            <th scope="col">@Html.Label("desc", "Description: ")</th>
+                            <th scope="col">@Html.Label("lineprofit", "Line Profit: ")</th>
+                            <th scope="col">@Html.Label("saleperson", "Sales Person: ")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var items in Model.InvoiceLines)
+                        {
+                            <tr>
+                                <th scope="row">@Html.DisplayFor(it => items.StockItemID)</th>
+                                <td>@Html.DisplayFor(it => items.Description)</td>
+                                <td>@Html.DisplayFor(it => items.LineProfit)</td>
+                                <td>@Html.DisplayFor(it => items.Invoices.People4.FullName)</td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        }
+
+    </div>
+
+
+
+
+</div>
+
+<p>
+   
+    @Html.ActionLink("Back to Search", "Index")
+</p>

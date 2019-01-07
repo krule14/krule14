@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw7 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw7 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,39 +73,106 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 7 Blog</b></h1>
         </header>
-        <!-- About Card -->
+        
+        <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rm6JS18in7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <br />
+                <script src="https://gist.github.com/krule14/ca525d97540518bef5e0b62c78956e29.js"></script>
+                <br />
                 <p>
-                    This blog isn't finished yet!
+                    "Uninteresting" words:
                 </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
-                </form>
+                <p>
+                    popularWords = ['without', 'before','under','around','among','the', 'of','to',
+                    'and','a','in','is','it','you','that','he','was','for','on','are','with',
+                    'as','I','his','they','be','at','one', 'have','this','from', 'or','had','by', 'hot','word',
+                    'but','what', 'some', 'we', 'can', 'out', 'other','were','all','there','when',
+                    'up',
+                    'use',
+                    'your',
+                    'how',
+                    'said',
+                    'an',
+                    'each',
+                    'she',
+                    'which',
+                    'do',
+                    'their',
+                    'time',
+                    'if',
+                    'will',
+                    'way',
+                    'about',
+                    'many',
+                    'then',
+                    'them',
+                    'write',
+                    'would',
+                    'like',
+                    'so',
+                    'these',
+                    'her',
+                    'long',
+                    'make',
+                    'thing',
+                    'see',
+                    'him',
+                    'two',
+                    'has',
+                    'look',
+                    'more',
+                    'day',
+                    'could',
+                    'go',
+                    'come',
+                    'did',
+                    'number',
+                    'sound',
+                    'no',
+                    'most',
+                    'people',
+                    'my',
+                    'over','know'];
+                </p>
             </div>
-
         </div>
 
+      
+ 
 
+    <!-- "Check out the code" -->
+    <div class="w3-card w3-margin w3-margin-top">
+        <div class="w3-container w3-white">
+            <h4><b>Check out the code!</b></h4>
+            <p>
+                The code is in my github repository, see it here:
+            </p>
+            <form action="https://github.com/krule14/krule14">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
+            </form>
         </div>
-        <!-- END w3-content -->
+
     </div>
 
 
+    </div>
+    <!-- END content -->
+
+
+
 </body>
-</html>
+
