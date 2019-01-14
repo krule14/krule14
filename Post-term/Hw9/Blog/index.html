@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw9 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw9 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,39 +73,98 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 9 Blog</b></h1>
         </header>
-        <!-- About Card -->
+
+
+
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
+                <p>Start by adding a connection in server explorer:</p>
+                <img class="imgCenter" src="img/ServerExplorer.PNG" />
+                <img class="imgCenter" src="img/AddConnection1.PNG" />
+                <p></p>
+            </div>
+        </div>
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <p>You need your server name, here's where to find it:</p>
+                <img class="imgCenter" src="img/ServerNameConnectionStrings.PNG" />
+                <p></p>
+            </div>
+        </div>
+
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
                 <p>
-                    This blog isn't finished yet!
+                    You put in your info, pick a database, and test:
                 </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
+                <img class="imgCenter" src="img/AddConnection2.PNG" />
+                <p></p>
+            </div>
+        </div>
+
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <p>Then  you look up the database connection strings from 2 images ago. Use the connection string you find plus some username password info. SHHH!</p>
+                <img class="imgCenter" src="img/SHH.PNG" />
+                <p></p>
+            </div>
+        </div>
+
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <p>Now, input the above connection string into both the add connection string under your application settings and your web.config. Make sure they match like so:</p>
+                <img class="imgCenter" src="img/DBConnectionString.PNG" />
+                <img class="imgCenter" src="img/WebConfigConnectionString.PNG" />
+                <p></p>
+            </div>
+        </div>
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <p>Publish your stuff:</p>
+                <img class="imgCenter" src="img/Publish.PNG" />
+                <p></p>
+            </div>
+        </div> <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <p>Reap the reward::</p>
+                <img class="imgCenter" src="img/Reap.PNG" />
+                <p></p>
+            </div>
+        </div> 
+
+
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
+                <p>
+                    The code is in my github repository, see it here:
+                </p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
                 </form>
             </div>
 
         </div>
 
 
-        </div>
-        <!-- END w3-content -->
     </div>
+    <!-- END content -->
+
 
 
 </body>
-</html>
+

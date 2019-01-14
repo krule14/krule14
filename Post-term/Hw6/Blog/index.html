@@ -84,32 +84,164 @@
             <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 6 Blog</b></h1>
         </header>
+
         
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                
+                <p><strong>[Setup]</strong> We'll be using an existing database for this homework.  For the last two years we used the venerable SQL Server example <a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a>, which was for an online cycling products store.  It's time to do something different.  We'll use SQL Server's newest example, called World Wide Importers.  This database represents a wholesale novelty goods importer and distributor operating from the San Francisco bay area.</p>
+                <p>  Begin by downloading and restoring the OLTP version of this database.  Here's a <a href="https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Standard.bak">direct link</a> to a reasonably sized backup file that you can use to restore the db.  This version contains only data from a single year (2013).  <a href="https://github.com/Microsoft/sql-server-samples">Here's a link</a> to the git repository where it resides.  Lastly, here's the <a href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">documentation</a>.  If you need help restoring it <a href="https://www.howtogeek.com/50354/restoring-a-sql-database-backup-using-sql-server-management-studio/">look here</a>.</p>
+                <p>This database uses a data type (<code>DbGeography</code>) for locations that is not installed by default in an MVC app.  You'll need to use Nuget to add <code>Microsoft.SqlServer.Types</code> to your project.  In addition you'll need to add these lines to your <code>Global.asax.cs</code> file, i.e. the first two lines in: </p>
+                <pre class="prettyprint lang-cs"><code>protected void Application_Start()
+{
+    // For Spatial types, i.e. DbGeography
+    SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~/bin"));
+    // This next line is a fix that came from: https://stackoverflow.com/questions/13174197/microsoft-sqlserver-types-version-10-or-higher-could-not-be-found-on-azure/40166192#40166192
+    SqlProviderServices.SqlServerTypesAssemblyName = typeof(SqlGeography).Assembly.FullName;
+
+    AreaRegistration.RegisterAllAreas();
+    FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+    RouteConfig.RegisterRoutes(RouteTable.Routes);
+    BundleConfig.RegisterBundles(BundleTable.Bundles);
+}</code></pre>
+
+                <p>To help you get started with using the database I've generated a diagram of the tables we're using.  It's not as easy to read as I envisioned but it'll show you the relations and the tables to look at.</p>
+                
+            </div>
+
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <strong>[Setup]</strong>  Follow the steps shown in class (or here for reference: <a href="https://msdn.microsoft.com/en-us/library/jj200620(v=vs.113).aspx">Entity Framework - Code First from Existing Database</a>, the key part is <em>from an existing database</em> and <em>reverse engineering the model</em>) to create a MVC project (same template we've been using), add the database and reverse engineer (generate) model classes.  The backup file has a number of "archive" tables; we don't want those, so select only the tables that don't have archive in the name.  We also don't need the db views.  I ended up with 31 model classes.  Make sure you move your <code>DbContext</code> class over into a DAL folder.
+                <h4>Solution</h4>
+                <img class="imgCenter" src="img/Database.PNG" />
+                <img class="imgCenter" src="img/DAL.PNG" />
+            </div>
+
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Content/Coding]</strong> Feature #1: People Search</p>
+
+                <p class="user-story paper">As a salesperson, customer support employee, analyst or manager of World Wide Importers I want to find a particular person by name so I can look up information about them and email or call them.  Also, I'd like to see their picture so I have a personal connection to our customer or employee.  Sometimes I only remember their first name, sometimes their last, or sometimes just part of their name.</p>
+
+                <p>After speaking with stakeholders at WWI it is determined that they want a web page with a prominant search bar.  Typing in a name, or part of a name and hitting return or clicking the search button will search the companies database for a list of names that match.  The list of names should appear on the same page, below the search bar.  Clicking on one of the names should take the user to a separate page where they can view the following information for the searched person (<code>People</code> entity):</p>
+                
+                <p>
+                    <ol>
+                        <li>Full Name</li>
+                        <li>Their preferred name</li>
+                        <li>Phone Number</li>
+                        <li>Fax Number</li>
+                        <li>Email address (as a mailto link)</li>
+                        <li>The date they became a customer, member or employee (I used the <code>ValidFrom</code> attribute) </li>
+                        <li>Their photo (there's an attribute in the table for photo but I think they're all null, so just use a placeholder until they start putting photos in the database)</li>
+                    </ol>
+                </p>
+
+                <p>For ease of use, clicking the back button should take the user back to the search page where the search results are still present.</p>
+
+                <p>Your stakeholders have not given a preference as to what this should look like or how you do this, so it's your choice.  What controller(s) or views, or GET, POST, ... are up to you.    Also, try to make it look decent please, but don't spend 10 hours fiddling with CSS.</p>
+
+                <h4>Solution</h4>
+                <p> Refer to video.</p>
+            </div>
+
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Content/Coding]</strong> Feature #2: Customer Sales Dashboard</p>
+
+                <p>That last feature was a great hit.  Everyone is using it.  It worked great for looking up everyone in the companies database.  Many of the stakeholders want more though.  If the person is a customer then they want to see some details about their company and WWI's sales to it.  This user story describes what is needed.</p>
+
+                <p class="user-story paper">As a salesperson, customer support employee, analyst or manager of World Wide Importers I want to view company information, purchase history and top items sold to the company that this customer is a representative of, so I can learn a little about the company, what we've sold them and how much profit we've made through this customer.</p>
+
+                <p>Specifically the stakeholders want the following.  If the person searched for is the primary contact person (their ID is the <code>PrimaryContactPersonID</code> in the <code>Customer</code>) then display the following.  If they are not the primary contact person, then don't show anything more than the previous feature.</p>
+                <p>
+                    <ol>
+                        <li>
+                            For the company:
+                            <ol type="a">
+                                <li>Company name</li>
+                                <li>Phone number</li>
+                                <li>Fax number</li>
+                                <li>Website (as a link)</li>
+                                <li>What year they started as our customer</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Purchases:
+                            <ol type="a">
+                                <li>How many orders has this company made?</li>
+                                <li>What is the total gross sales to this company?  The Data Architect told you that this can be calculated by adding up the <code>ExtendedPrice</code> for all <code>InvoiceLines</code> for all <code>Invoices</code> for all <code>Orders</code> from this <code>Customer</code>. </li>
+                                <li>How much profit total have we made from this customer?  Similarly to the last one, the Data Architect told you that this can be calculated by adding up the <code>LineProfit</code> for all <code>InvoiceLines</code> for all <code>Invoices</code> for all <code>Orders</code> from this <code>Customer</code>.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            What are 10 most profitable (to us) items this customer has purchased?  List the <code>StockItemID</code>, Description, Profit and the Salesperson who handled the sale.
+                        </li>
+                    </ol>
+                </p>
+                <p>This view will need a lot of data and it won't come from just one model or a list.  Here's the perfect opportunity to use the <em>required</em> View Model.  Put it in a subfolder of your <samp>Models</samp> folder.</p>
+                
+                <h4>Solution</h4>
+                <p> Refer to video.</p>
+            </div>
+
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <strong>[Portfolio Content]</strong> And by now you know the drill; put it all in your Portfolio.  Do you know what would make the grader really happy?  A video of you demonstrating your website. In fact, I think for this one it's mandatory that you make a video.  You can put it on your <samp>public_html</samp> or <samp>P:</samp> drive or upload it to YouTube (if private, share with <samp>morses@mail.wou.edu</samp>) or whatever. 
+
+                <h4>Solution</h4>
+            </div>
+
+        </div>
+
+
+
+
+
         <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
+                <h4>The long-awaited video!</h4>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/9FOv6yLH0Fc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
 
         </div>
 
-      
- 
 
-    <!-- "Check out the code" -->
-    <div class="w3-card w3-margin w3-margin-top">
-        <div class="w3-container w3-white">
-            <h4><b>Check out the code!</b></h4>
-            <p>
-                The code is in my github repository, see it here:
-            </p>
-            <form action="https://github.com/krule14/krule14">
-                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
-            </form>
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
+                <p>
+                    The code is in my github repository, see it here:
+                </p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
+                </form>
+            </div>
+
         </div>
-
-    </div>
 
 
     </div>
