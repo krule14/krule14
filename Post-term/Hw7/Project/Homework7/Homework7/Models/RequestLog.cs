@@ -22,5 +22,6 @@ namespace Homework7.Models
 
         [Required]
         public string BrowserType { get; set; }
+
     }
 }

@@ -1,0 +1,79 @@
+﻿
+@model IEnumerable<Homework8Troubleshoot.Models.Bid>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>REGINALD'S ANCIENT ANTIQUITIES AUCTION HOUSE</h1>
+</div>
+
+<div class="row">
+
+
+    <br />
+
+    <div class="container">
+        <h3>Current Biding Table</h3>
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayName("Item ID")
+                </th>
+                <th>
+                    @Html.DisplayName("Customer")
+                </th>
+                <th>
+                    @Html.DisplayName("Item")
+                </th>
+                <th>
+                    @Html.DisplayName("Bid")
+                </th>
+                <th>
+                    @Html.DisplayName("Timestamp")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item1.IID)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Buyer1.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Item1.Name)
+                    </td>
+                    <td>
+                        @String.Format("{0:c}", item.Price)
+                    </td>
+                    <td>
+                        @if (item.Timestamp.Date == DateTime.Now.Date)
+                        {
+                            @String.Format("{0:h:m:ss tt}", item.Timestamp);
+                        }
+                        else
+                        {
+                            @String.Format("{0:M/d/yyyy}", item.Timestamp);
+                        }
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+        <p><a class="btn btn-default" href="/Bids/Create"> Bid on an Item!</a></p>
+
+
+    </div>
+
+
+
+</div>
