@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw7 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw7 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,39 +73,392 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 7 Blog</b></h1>
         </header>
-        <!-- About Card -->
+
+
+
+
+
+
+
+
+        <!-- Question  -->
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
+                <h4>Question </h4>
+                <p><strong>[Setup]</strong> Start by creating a simple MVC web application.  You want to start with the minimal "Empty" example this time, but check the box to add folders and core references for MVC. </p>
+
+            </div>
+
+        </div>
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Content/Coding]</strong>  Create just a single controller and view that creates one page with a text input.  This will be the only view and the only page for the entire HW.  Get rid of the nav bar.</p>
+
+
+                <h4>Solution</h4>
+                <img class="imgCenter" src="img/wireframe.PNG"
+            </div>
+
+        </div>
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Setup]</strong> Next up, go to <a href="https://developers.giphy.com/docs/">Giphy</a> and register as a developer.  Create an application and they'll give you your API key which you will use to craft GET requests.  This key is a secret; treat it like a password.  <strong>Don't put it anywhere in your source code and certainly not in your repository anywhere.</strong>  (I'll show you in class how to hide this secret from your repo and still use it in your code.)</p>
+
+                <p>Read their documentation and try out their API Explorer so you understand how to use their API.  We'll use their <a href="https://developers.giphy.com/docs/#giphy-sticker-api">Sticker API</a> and the <code>Translate</code> endpoint.  Try out some searches with your key, with their API Explorer, Postman and a browser.  I find that using Firefox Developers Edition is really nice for this because it parses the JSON and displays it in tree form with syntax highlighting.</p>
+
+                <p>Get to know the correct format and terms for a search as well as the JSON data that is returned.</p>
+
+                <p>For example, here is an object that is returned by searching for &ldquo;lobster&rdquo; with this request </p>
+
+                <p><code class="language-http">GET https://api.giphy.com/v1/stickers/translate?api_key=XXXYourKeyHereXXX&s=lobster</code> </p>
+                <pre class="scroll-600"><code class="language-json">{
+"data":
+{
+    "type": "gif",
+    "id": "7hqG8IJQRU1Qk",
+    "slug": "weird-lobster-transparent-7hqG8IJQRU1Qk",
+    "url": "https://giphy.com/stickers/weird-lobster-transparent-7hqG8IJQRU1Qk",
+    "bitly_gif_url": "https://gph.is/1aSHDAX",
+    "bitly_url": "https://gph.is/1aSHDAX",
+    "embed_url": "https://giphy.com/embed/7hqG8IJQRU1Qk",
+    "username": "scottgelber",
+    "source": "https://time-cop.tumblr.com/post/49629120885/noah-spidermen-macbook-prawn-2013-animated-gif",
+    "rating": "g",
+    "content_url": "",
+    "source_tld": "time-cop.tumblr.com",
+    "source_post_url": "https://time-cop.tumblr.com/post/49629120885/noah-spidermen-macbook-prawn-2013-animated-gif",
+    "is_sticker": 1,
+    "import_datetime": "2013-11-03 00:18:48",
+    "trending_datetime": "2017-06-26 17:34:10",
+    "user":
+    {
+        "avatar_url": "https://media.giphy.com/avatars/scottgelber/3opUDVNqoB0y.gif",
+        "banner_url": "",
+        "profile_url": "https://giphy.com/scottgelber/",
+        "username": "scottgelber",
+        "display_name": "Scott Gelber",
+        "guid": "Z2VsYmVyLnNjb3R0QGdtYWlsLmNvbQ",
+        "is_verified": true
+    },
+    "images":
+    {
+        "fixed_height_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200_s.gif",
+            "width": "216",
+            "height": "200",
+            "size": "11676"
+        },
+        "original_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy_s.gif",
+            "width": "400",
+            "height": "371",
+            "size": "36390"
+        },
+        "fixed_width":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w.gif",
+            "width": "200",
+            "height": "186",
+            "size": "269913",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w.mp4",
+            "mp4_size": "38405",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w.webp",
+            "webp_size": "251982"
+        },
+        "fixed_height_small_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100_s.gif",
+            "width": "108",
+            "height": "100",
+            "size": "4633"
+        },
+        "fixed_height_downsampled":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200_d.gif",
+            "width": "216",
+            "height": "200",
+            "size": "50611",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200_d.webp",
+            "webp_size": "45910"
+        },
+        "preview":
+        {
+            "width": "228",
+            "height": "210",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-preview.mp4",
+            "mp4_size": "43832"
+        },
+        "fixed_height_small":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100.gif",
+            "width": "108",
+            "height": "100",
+            "size": "99844",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100.mp4",
+            "mp4_size": "15908",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100.webp",
+            "webp_size": "101130"
+        },
+        "downsized_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-downsized_s.gif",
+            "width": "400",
+            "height": "371",
+            "size": "36390"
+        },
+        "downsized":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-downsized.gif",
+            "width": "400",
+            "height": "371",
+            "size": "1021609"
+        },
+        "downsized_large":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.gif",
+            "width": "400",
+            "height": "371",
+            "size": "1021609"
+        },
+        "fixed_width_small_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100w_s.gif",
+            "width": "100",
+            "height": "93",
+            "size": "4227"
+        },
+        "preview_webp":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-preview.webp",
+            "width": "155",
+            "height": "144",
+            "size": "49166"
+        },
+        "fixed_width_still":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w_s.gif",
+            "width": "200",
+            "height": "186",
+            "size": "10636"
+        },
+        "fixed_width_small":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100w.gif",
+            "width": "100",
+            "height": "93",
+            "size": "88287",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100w.mp4",
+            "mp4_size": "14638",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/100w.webp",
+            "webp_size": "90880"
+        },
+        "downsized_small":
+        {
+            "width": "400",
+            "height": "370",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-downsized-small.mp4",
+            "mp4_size": "153039"
+        },
+        "fixed_width_downsampled":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w_d.gif",
+            "width": "200",
+            "height": "186",
+            "size": "45280",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200w_d.webp",
+            "webp_size": "41440"
+        },
+        "downsized_medium":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.gif",
+            "width": "400",
+            "height": "371",
+            "size": "1021609"
+        },
+        "original":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.gif",
+            "width": "400",
+            "height": "371",
+            "size": "1021609",
+            "frames": "41",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.mp4",
+            "mp4_size": "180633",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.webp",
+            "webp_size": "895734",
+            "hash": "847a68e3bb9b70a191b84d87700388fe"
+        },
+        "fixed_height":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200.gif",
+            "width": "216",
+            "height": "200",
+            "size": "301842",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200.mp4",
+            "mp4_size": "42016",
+            "webp": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/200.webp",
+            "webp_size": "278668"
+        },
+        "looping":
+        {
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-loop.mp4",
+            "mp4_size": "1448551"
+        },
+        "original_mp4":
+        {
+            "width": "480",
+            "height": "444",
+            "mp4": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy.mp4",
+            "mp4_size": "180633"
+        },
+        "preview_gif":
+        {
+            "url": "https://media2.giphy.com/media/7hqG8IJQRU1Qk/giphy-preview.gif",
+            "width": "143",
+            "height": "133",
+            "size": "48866"
+        },
+        "480w_still":
+        {
+            "url": "https://media1.giphy.com/media/7hqG8IJQRU1Qk/480w_s.jpg",
+            "width": "480",
+            "height": "445"
+        }
+    },
+    "title": "weird computer STICKER by Scott Gelber",
+    "_score": 1111013.2,
+    "_topScoreQuotient": 0.9999963996957
+},
+"meta":
+{
+    "status": 200,
+    "msg": "OK",
+    "response_id": "5bdc8b284b79706e59cad7cc"
+}
+}</code></pre>
+                <p>You get a JSON object which contains a bunch of information about a single sticker that "matches" the translation of your word.  Here's that sticker as a small gif: <img src="https://media2.giphy.com/media/7hqG8IJQRU1Qk/100_s.gif" alt="Giphy sticker that translates from lobster">.  I used the static version because seeing all these animated gifs drives me nuts.  Also inside is id, title, rating, source, and URL's for many versions of the image.</p>
+
+                <p>  To preview what we're doing, this JSON object is what you get <em>at your server</em>.  You'll use C# to parse this, extract what's needed and build a <code>JsonResult</code> to send to your client.</p>
+
+            </div>
+
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Requirements]</strong> Now here's the plan.</p>
+                <ol>
+                    <li>The user begins typing a phrase or sentence, for example "I'm going to walk my lobster".</li>
+                    <li>You have previously registered a Javascript callback function on the text input in order to run custom Javascript code.</li>
+                    <li>Your code waits for a space to be typed, which indicates a word has been typed.  If the word is a "boring" word then just output it directly below.  But if it's "interesting" we want to find a sticker translation for it.  (I'll leave the defintion of boring and interesting up to you.)   If a word needs a translation your Javascript makes an AJAX call to a controller action method, passing it the word that was just typed.</li>
+                    <li>Your action method assembles a GET request (using your secret API key and the Sticker API Translate endpoint) and sends it off to Giphy's servers.  Your action method receives a JSON response to your server containing a match to the search word you're asking Giphy to "translate" for you.  This is in the C# code.</li>
+                    <li>Using this, extract from the JSON object and assemble whatever data is needed in order for your client Javascript to display a sticker for the word.  You send this data from the action method to the client as a <code>JsonResult</code> object, which is then processed by your Javascript code to modify the DOM and display the sticker image.</li>
+                    <li>Other than the initial page load of an empty search box, all UI triggered communication between the client and your server must be via JSON.  We're never requesting and returning an entirely new page (view).</li>
+                    <li>The user then continues to type and common words are moved to the bottom, while interesting ones are translated and appear as images.  You just keep doing this all this over again <strong>and the page never reloads</strong> -- it's dynamic.  I suspect you'll want to reset the text box to empty at some point, or add a clear button to keep it tidy.  That kind of thing is up to you.  As is the annoy factor: use all animated gifs?  or just one or two.  That's up to you.</li>
+                    <li>For the AJAX call, use jQuery's <a href="http://api.jquery.com/jquery.ajax/">ajax</a> or <a href="https://api.jquery.com/jQuery.getJSON/#jQuery-getJSON-url-data-success">getJSON</a> method.</li>
+                    <li>Your controller action method for handling the AJAX request needs to use a custom route (in <samp>AppStart/RouteConfig.cs</samp> ) with an API feel.  For example: <samp>~/translate/lobster</samp> actually routes to the <code>TranslateApi</code> controller and the <code>Sticker</code> action method.  We want to show that we can do custom routing rather than the default routing.</li>
+                </ol>
+
+                <h4>Solution</h4>
                 <p>
-                    This blog isn't finished yet!
+                    "Uninteresting" words:
                 </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
+                <code>
+                    var popularWords = ['without', 'before', 'under', 'around', 'among', 'the', 'of', 'to', 'and', 'a', 'in', 'is', 'it', 'you', 'that', 'he', 'was', 'for', 'on', 'are', 'with', 'as', 'I', 'his', 'they', 'be', 'at', 'one', 'have', 'this', 'from', 'or', 'had', 'by', 'hot', 'word', 'but', 'what', 'some', 'we', 'can', 'out', 'other', 'were', 'all', 'there', 'when', 'up', 'use', 'your', 'how', 'said', 'an', 'each', 'she', 'which', 'do', 'their', 'time', 'if', 'will', 'way', 'about', 'many', 'then', 'them', 'write', 'would', 'like', 'so', 'these', 'her', 'long', 'make', 'thing', 'see', 'him', 'two', 'has', 'look', 'more', 'day', 'could', 'go', 'come', 'did', 'number', 'sound', 'no', 'most', 'people', 'my', 'over', 'know'];
+
+                </code>
+
+            </div>
+
+
+        </div>
+        
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Content/Coding]</strong> Add a database to your project to keep a log of search requests.  Make a table that will hold information about requests made to your server.  When a request comes in, add an entry to the table with information about the request.  You should log things like date/time, what the request was, the IP address of the requestor and the client's browser agent type.</p> <p>Logging is a very common activity that is very useful when testing code.  In production you'd probably only log requests that returned error codes, but we'd like to record everything.</p> 
+
+                <h4>Solution</h4>
+                <img class="imgCenter" src="img/ListOfQueries.PNG" />
+
+            </div>
+
+        </div>
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <strong>[Portfolio Content]</strong> And as usual, write it all up in your Portfolio.  This one definitely needs a video of your application in use and a screenshot showing your log table accumulating data.
+                <h4>Solution</h4>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Question 1 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rm6JS18in7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <br />
+                <script src="https://gist.github.com/krule14/ca525d97540518bef5e0b62c78956e29.js"></script>
+                <br />
+                
+            </div>
+        </div>
+
+
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
+                <p>
+                    The code is in my github repository, see it here:
+                </p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
                 </form>
             </div>
 
         </div>
 
 
-        </div>
-        <!-- END w3-content -->
     </div>
+    <!-- END content -->
+
 
 
 </body>
-</html>
+

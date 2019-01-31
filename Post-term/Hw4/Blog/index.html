@@ -18,9 +18,9 @@
     <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
     <style>
         .imgCenter {
-            max-width: 70%;
-            margin-left: 15%;
-            margin-right: 15%;
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 
@@ -85,22 +85,7 @@
             <h1><b>Homework 4 Blog</b></h1>
         </header>
 
-        <!-- About Card -->
-        <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
-            <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
-                <p>
-                    This blog isn't finished yet!
-                </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
-                </form>
-            </div>
-
-        </div>
-
-
+        
         <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
@@ -113,7 +98,7 @@
 
                 <p></p>
                 <p>
-
+                    <img class="imgCenter" src="img/GitUpdates.PNG" />
                 </p>
 
             </div>
@@ -124,11 +109,16 @@
         <div class="w3-card w3-margin w3-margin-top">
             <div class="w3-container w3-white">
                 <h4><b>Question 2</b></h4>
-                <p><strong>[Content/Coding]</strong> Create a &ldquo;Home&rdquo; default landing page that will contain links to each of the other pages you'll create in the tasks below.  You must use Razor <code>@Html.ActionLink</code> HTML helper methods to do this.  (Implied in this is that you have an appropriately named controller with action method and a suitable view.)</p><p>Below is a basic example.  Feel free to reproduce this one or make it your own, but note that yours should look at least as nice and all the routes should be the same, i.e. <samp>hostname/Home</samp> or just <samp>hostname/</samp>.  This will be explained in the video at the very bottom.</p>
+                <p><strong>[Content/Coding]</strong> Create a &ldquo;Home&rdquo; default landing page that will contain links to each of the other pages you'll create in the tasks below.  You must use Razor <code>@Html.ActionLink</code> HTML helper methods to do this.  (Implied in this is that you have an appropriately named controller with action method and a suitable view.)</p>
                 
                 <h4><b>Solution </b></h4>
                 <p>
-
+                    Here you can see that I created a landing page with links and buttons that link to the other pages.
+                    <img class="imgCenter" src="img/HomePage.PNG" />
+                 </p>
+                <p>
+                    Here you can see that I used several instances of actionlink.
+                    <img class="imgCenter" src="img/ActionLink.PNG" />
                 </p>
 
 
@@ -161,8 +151,13 @@
 
                     <h4><b>Solution </b></h4>
                     <p>
-
-
+                        Below you see that I did not use razor methods for the form. 
+                        <script src="https://gist.github.com/krule14/fd6afbcd85db012a58155eb40df59394.js"></script>
+                        </p>
+                    <p>
+                         Below you see that I used the request object. 
+                        <script src="https://gist.github.com/krule14/0d9030eaef792e78a824eba015a29921.js"></script>
+                    
                     </p>
 
             </div>
@@ -194,16 +189,25 @@ public ActionResult MyPage(int? id, int? size, string kind)
                     <li>To mix colors you can make up an algorithm or use this one: add the red components together, add the green together, and add the blues together, then if any of the values is greater than 255, set it to 255, i.e. clip it at the maximum value of 255 or FF.  That's what my version does.  C# has <code>Color</code> and <code>ColorTranslator</code> classes to help with this a bit.</li>
                     <li>Make your page robust so that if, for example, the user doesn't enter a color, or they type something that isn't a hexadecimal HTML color, no errors are generated and you tell them that it's required.  This is generally referred to as form validation.  I suggest you do it client side using HTML (not javascript) and also server side with C#.  <strong>Always validate your input before using!!!</strong></li>
                 </ol>
-
-
                 </p>
 
                 <h4>Solution</h4>
                 <p>
-
-
+                    As you can see, I used Razor.
+                    <img class="imgCenter" src="img/RazorInColorPicker.PNG" />
                 </p>
-
+                <p>
+                    As you can see I used Post, and used parameter binding.
+                    <script src="https://gist.github.com/krule14/5a0f6d661b623eb18706c6c08a6837bc.js"></script>
+                </p>
+                <p>
+                    As you can see, my mixer works fairly well. It also clips. This will be better shown in the video below. 
+                    <img class="imgCenter" src="img/ColorChooserWorking.PNG" />
+                </p>
+                <p>
+                    As you can see, it has some validation. This is easier to see in the video below. 
+                    <img class="imgCenter" src="img/ChooserBadInput.PNG" />
+                </p>
             </div>
 
         </div>
@@ -214,55 +218,19 @@ public ActionResult MyPage(int? id, int? size, string kind)
             <div class="w3-container w3-white">
                 <h4><b>Question 5</b></h4>
                 <strong>[Requirements]</strong>  Here's a video walkthrough to help you get all the pieces right.  I explain how each page works and explain the requirements further. <strong>  So the video capture (OBS Studio) would capture the input validation popups I had to record full screen, which made the video huge.</strong>
-                <video controls width="800">
-                    <source src="http://www.wou.edu/~morses/classes/cs46x/assignments/2018-10-12_16-01-11.mp4" type="video/mp4">
-                    <p>Your browser doesn't support HTML5 video.  Here is a <a href="http://www.wou.edu/~morses/classes/cs46x/assignments/2018-10-12_16-01-11.mp4">link to the video</a> instead.</p>
-                </video>
+
                 <h4><b>Solution </b></h4>
 
-                <p>
-
-
-                </p>
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ejIPZs3J4Qk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <p>If your browser doesn't support video,  here is a <a href="https://youtu.be/ejIPZs3J4Qk">link to the video</a> instead.</p>
+                   
+                
 
 
             </div>
 
         </div>
-
-        <!-- Question 6-->
-        <div class="w3-card w3-margin w3-margin-top">
-            <div class="w3-container w3-white">
-                <h4><b>Question 6</b></h4>
-                <p>
-                    <strong>[Turn It In]</strong> Finally, <code>merge</code> your feature branches back into master and <code>push</code> to your remote repository.
-                </p>
-                <h4>Solution</h4>
-                <p>
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- Question 7-->
-        <div class="w3-card w3-margin w3-margin-top">
-            <div class="w3-container w3-white">
-                <h4><b>Question 7</b></h4>
-                <p>
-                    <strong>[Portfolio Content]</strong>  Lastly, put it all in your Portfolio as usual.  We need screenshots or a video to be able to tell if it's working.  Now that we're into ASP.NET MVC there is a lot more code in your project.  We don't want it all though; for your Portfolio, only include the code you write.  Just include it as snippets, with some nice explanations in between!
-                </p>
-                <h4>Solution</h4>
-                <p>
-
-
-                </p>
-
-            </div>
-
-        </div>
-
 
         <!-- "Check out the code" -->
         <div class="w3-card w3-margin w3-margin-top">

@@ -1,23 +1,33 @@
 ﻿
 <!DOCTYPE html>
+<head>
+    <title>Hw8 Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-<title>Hw8 Blog</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home Page - My ASP.NET Application</title>
-<link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
-<link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../SupportFiles/Content/site.css" rel="stylesheet" />
 
-<script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <script src="../../SupportFiles/Scripts/modernizr-2.8.3.js"></script>
+    <style>
+        .imgCenter {
+            max-width: 40em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 
+
+</head>
 <body>
+    <!--Menu-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="collapse navbar-collapse">
@@ -63,39 +73,157 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Help" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+            </ul>
         </div>
     </nav>
 
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1400px">
 
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-32">
-            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" style="max-width: 100%;">
+            <img src="../../SupportFiles/img/SmokeySky.jpg" alt="SmokeySky" class="headpic" style="max-width: 100%;">
             <h1><b>Homework 8 Blog</b></h1>
         </header>
-        <!-- About Card -->
+
+
+        <!-- Question 1 -->
         <div class="w3-card w3-margin w3-margin-top">
-            <!--<img src="/w3images/avatar_g.jpg" style="width:100%">-->
             <div class="w3-container w3-white">
-                <h4><b>Whoops!</b></h4>
+                <h4>Question 1</h4>
+                <strong>[Setup]</strong> Create a new MVC application.  Do all your work for this assignment in one or more feature branches.
+                <h4>Solution:</h4>
+                <p> Forgot to do this step, then did it, and got git snafu'ed. I have a copy of this project, but all of the portfolio work I did over the weekend is gone. *sigh*</p>
+                <img class="imgCenter" src="img/GitSnafu.PNG" />
+                <p></p>
+            </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question 2</h4>
+                <p><strong>[Modeling &amp; Design]</strong>  Begin with the domain model.  There are four entities: <strong>Buyer</strong>, <strong>Seller</strong>, <strong>Item</strong> and <strong>Bid</strong>. <a href="HW8_1819_tables.html">This page</a> explains the relations between entities and provides seed data.  All relations must be present as named constraints in your database schema.  Generate an E-R diagram of your database schema to include in your portfolio.</p>
+                <p>Write an UP script (in <samp>App_Data/up.sql</samp>) to create the database and a DOWN script (in <samp>App_Data/down.sql</samp>) to delete all tables.</p>
+                <p>Build the database.</p>
+
+                <h4>Solution:</h4>
+                <p> I had read all the way through the requirements, but I either forgot or failed to grok that you only wanted the ER diagram and my video.</p>
+               
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question 3:</h4>
+                <p><strong>[Content/Coding]</strong> Create a welcome page with the title, <span class="special-title2">Reginald's Ancient Antiquities Auction House</span>, and a menu/navbar that is shared among all pages.  Later questions will have you add things to this menu.</p>
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question  4-->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question 4:</h4>
+                <p><strong>[Content/Coding]</strong>  Implement CRUD functionality for <strong>Items</strong> and place a menu item on the main menu/navbar to the list page.  Items are identified to all parties by their ID.  Items are for sale by a Seller, who has a name.  It is important for these views to correctly show/handle the item ID, name and seller's name.</p>  <p>Here are the 5 parts needed:</p>
+                <ul>
+                    <li>Item Index/List page</li>
+                    <li>Item Create page (<strong>C</strong>reate): should NOT allow user selection of the ID -- the system should create a new unique ID.</li>
+                    <li>Item Details page (<strong>R</strong>ead): </li>
+                    <li>Item Edit page (<strong>U</strong>pdate): should NOT allow editing of the ID.</li>
+                    <li>Item Delete page (<strong>D</strong>elete)</li>
+                </ul>
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question 5:</h4>
+                <p><strong>[Content/Coding]</strong> Add a <strong>C</strong>reate page for <strong>Bids</strong> and place a link to it on the main menu/navbar.  This is only a create page, nothing else.  The user, acting as a Buyer, should be able to select which buyer they are, the item they are bidding on and set their bid price.  They should <strong>not</strong> be able to set the timestamp for the bid -- that must be set by the server to be the current time when the bid was submitted.  </p>
+                <p>There must not be any way to delete or edit Bids.  Once a bid is placed, it is final.</p>
+                <p>Add a button to the welcome page that says <strong>Bid on an Item!</strong>  Clicking on that button should take the user to this create a bid page.</p>
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <p><strong>[Content/Coding]</strong> Watch bidding feature:  add functionality to the <strong>Item</strong> details page that displays all bids for this item in a list or table, <em>in descending order by price</em>.  For each bid you must show the buyer's name and bid price.  <strong>You must retrieve and display this data using AJAX.</strong>  It should update automatically every 5 seconds (see: <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">MDN::setInterval()</a>) without reloading the page.</p>
+<pre><code class="language-javascript">var ajax_call = function() {
+    //your jQuery ajax code
+};
+  
+var interval = 1000 * X; // where X is your timer interval in X seconds
+  
+window.setInterval(ajax_call, interval);</code></pre>
+
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+
+                <p><strong>[Content/Coding]</strong> Add a list or table to the home page that shows the most recent 10 bids across all items, ordered chronologically.  For each bid you should show the Item ID, Item Name (which should be a link to the item details page), Buyer's Name, Bid Amount and the Bid timestamp.  Format the timestamp so that if it was bid today then show only the time.  If it was older than that, show the date as well.  (Assume everyone is in the same timezone and it's whatever time you're using.) </p>
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+
+                <p><strong>[Content/Coding]</strong> Add a list or table to the home page that shows the most recent 10 bids across all items, ordered chronologically.  For each bid you should show the Item ID, Item Name (which should be a link to the item details page), Buyer's Name, Bid Amount and the Bid timestamp.  Format the timestamp so that if it was bid today then show only the time.  If it was older than that, show the date as well.  (Assume everyone is in the same timezone and it's whatever time you're using.) </p>
+
+                <h4>Solution:</h4>
+            </div>
+        </div>
+
+        <!-- Question  -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4>Question </h4>
+                <strong>[Portfolio Content]</strong>  Make a video of your application in use.  Demo all functionality.  Since you're making a video for this one we'll go super easy on the Portfolio content.  The only content you need there is a page with links (to your video) and your E-R Diagram.
+
+                <h4>Solution:</h4>
+                <img class="imgCenter" src="EFDiagram.PNG" />
+                <p></p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xnA1POZrV6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+
+
+        <!-- "Check out the code" -->
+        <div class="w3-card w3-margin w3-margin-top">
+            <div class="w3-container w3-white">
+                <h4><b>Check out the code!</b></h4>
                 <p>
-                    This blog isn't finished yet!
+                    The code is in my github repository, see it here:
                 </p>
-                <form action="..\..\Portfolio\Portfolio.html">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Come Back Later! &raquo;</b></button></p>
+                <form action="https://github.com/krule14/krule14">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Repository &raquo;</b></button></p>
                 </form>
             </div>
 
         </div>
 
 
-        </div>
-        <!-- END w3-content -->
     </div>
+    <!-- END content -->
+
 
 
 </body>
-</html>
+
